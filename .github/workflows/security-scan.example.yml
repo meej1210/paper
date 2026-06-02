@@ -1,6 +1,8 @@
 name: DevSecOps Security Scan Example
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
