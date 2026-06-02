@@ -1,0 +1,19 @@
+flowchart TD
+    A[前端选择扫描类型] --> B{任务类型}
+    B -->|SAST| C[上传代码文件并选择扫描引擎]
+    B -->|DAST| D[填写目标 URL 并确认授权]
+    B -->|SCA| E[上传 requirements 文件或 ZIP]
+    C --> F[SAST 参数校验]
+    D --> G[DAST URL 与授权校验]
+    E --> H[SCA 文件类型与大小校验]
+    F --> I{校验结果}
+    G --> I
+    H --> I
+    I -->|失败| J[返回错误并记录必要审计]
+    I -->|通过| K[创建 Task 主记录]
+    K --> L{运行模式}
+    L -->|测试同步模式| M[当前进程执行扫描]
+    L -->|真实异步模式| N[投递 Redis 队列]
+    N --> O[Celery Worker 执行扫描]
+    M --> P[更新结果和任务状态]
+    O --> P

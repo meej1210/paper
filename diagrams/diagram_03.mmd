@@ -1,0 +1,22 @@
+flowchart TB
+    User[普通用户] --> Auth[用户认证模块]
+    Admin[管理员] --> Auth
+    Auth --> Task[扫描任务管理模块]
+
+    Task --> SAST[SAST 静态扫描模块]
+    Task --> DAST[DAST 动态扫描模块]
+    Task --> SCA[SCA 依赖扫描模块]
+
+    SAST --> Detail[任务详情与风险展示]
+    DAST --> Detail
+    SCA --> Detail
+    Detail --> Report[报告导出模块]
+    Task --> Audit[审计日志模块]
+    Report --> Audit
+
+    Admin --> Dashboard[管理看板模块]
+    Admin --> GlobalTasks[全局任务查询模块]
+    Dashboard --> AuditView[审计日志查看]
+    GlobalTasks --> AuditView
+
+    Detail --> AI[AI 辅助分析模块]

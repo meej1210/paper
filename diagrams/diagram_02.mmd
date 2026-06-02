@@ -1,0 +1,53 @@
+flowchart TB
+    subgraph Frontend[前端表示层]
+        V[Vue 3 页面组件]
+        R[Vue Router]
+        A[Axios 请求封装]
+        S[前端状态存储]
+    end
+
+    subgraph Backend[后端服务层]
+        API[Flask Blueprint 接口层]
+        Service[Service 业务层]
+        Auth[JWT 认证与权限校验]
+        Report[报告导出服务]
+    end
+
+    subgraph Async[异步任务层]
+        Redis[Redis 消息队列]
+        Worker[Celery Worker]
+    end
+
+    subgraph Tools[安全检测工具层]
+        Bandit[Bandit]
+        Semgrep[Semgrep]
+        Wapiti[Wapiti]
+        PipAudit[pip-audit]
+        WeasyPrint[WeasyPrint]
+    end
+
+    subgraph Data[数据与文件层]
+        DB[(SQLite 或可配置数据库)]
+        Uploads[uploads 上传目录]
+        Reports[reports 报告目录]
+    end
+
+    V --> R
+    V --> A
+    S --> A
+    A --> API
+    API --> Auth
+    API --> Service
+    Service --> DB
+    Service --> Uploads
+    Service --> Redis
+    Redis --> Worker
+    Worker --> Bandit
+    Worker --> Semgrep
+    Worker --> Wapiti
+    Worker --> PipAudit
+    Worker --> DB
+    Worker --> Reports
+    Service --> Report
+    Report --> WeasyPrint
+    Report --> Reports

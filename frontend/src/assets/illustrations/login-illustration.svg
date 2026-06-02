@@ -1,0 +1,109 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="login-ring" x1="798" y1="280" x2="1128" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9AFDFF"/>
+      <stop offset="0.46" stop-color="#35C9E5"/>
+      <stop offset="1" stop-color="#0A5E87"/>
+    </linearGradient>
+    <linearGradient id="login-panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#104F73" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#081C3B" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="login-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8EFFFA"/>
+      <stop offset="1" stop-color="#18A6D8"/>
+    </linearGradient>
+    <radialGradient id="login-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(968 545) rotate(90) scale(372 558)">
+      <stop offset="0" stop-color="#6BF6FF" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#6BF6FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="login-left-haze" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(426 532) rotate(90) scale(430 460)">
+      <stop offset="0" stop-color="#27A8DB" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#27A8DB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="login-right-haze" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1480 344) rotate(90) scale(320 410)">
+      <stop offset="0" stop-color="#86F8FF" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#86F8FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="login-soft" x="-200" y="-200" width="2320" height="1480" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+    <filter id="login-crisp" x="-80" y="-80" width="2080" height="1240" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#061731" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#login-soft)">
+    <circle cx="424" cy="532" r="280" fill="url(#login-left-haze)"/>
+    <circle cx="968" cy="545" r="300" fill="url(#login-glow)"/>
+    <circle cx="1480" cy="344" r="240" fill="url(#login-right-haze)"/>
+  </g>
+
+  <path d="M232 840C372 716 534 648 706 634C904 618 1028 696 1184 742C1360 794 1556 810 1728 726" stroke="url(#login-accent)" stroke-opacity="0.28" stroke-width="3"/>
+  <path d="M168 770C324 686 514 640 690 648C864 656 986 736 1166 778C1340 818 1546 806 1764 690" stroke="#7DF5FF" stroke-opacity="0.14" stroke-width="2"/>
+
+  <g opacity="0.66">
+    <circle cx="278" cy="708" r="8" fill="#87F9FF"/>
+    <circle cx="416" cy="640" r="6" fill="#35C9E5"/>
+    <circle cx="612" cy="632" r="7" fill="#87F9FF"/>
+    <circle cx="1242" cy="788" r="6" fill="#35C9E5"/>
+    <circle cx="1512" cy="768" r="7" fill="#87F9FF"/>
+    <circle cx="1708" cy="700" r="8" fill="#35C9E5"/>
+  </g>
+
+  <g filter="url(#login-crisp)">
+    <rect x="236" y="314" width="360" height="236" rx="34" fill="url(#login-panel)" stroke="#72EEFF" stroke-opacity="0.18"/>
+    <rect x="274" y="356" width="282" height="20" rx="10" fill="#7BFAFF" fill-opacity="0.16"/>
+    <rect x="274" y="406" width="214" height="16" rx="8" fill="#7BFAFF" fill-opacity="0.12"/>
+    <rect x="274" y="446" width="246" height="16" rx="8" fill="#7BFAFF" fill-opacity="0.1"/>
+    <path d="M388 600C432 552 478 522 546 508" stroke="#67F7FF" stroke-opacity="0.28" stroke-width="3"/>
+
+    <rect x="1336" y="214" width="322" height="210" rx="30" fill="url(#login-panel)" stroke="#72EEFF" stroke-opacity="0.18"/>
+    <rect x="1374" y="254" width="144" height="14" rx="7" fill="#7BFAFF" fill-opacity="0.14"/>
+    <g opacity="0.5">
+      <circle cx="1398" cy="320" r="7" fill="#7BFAFF"/>
+      <circle cx="1460" cy="320" r="7" fill="#35C9E5"/>
+      <circle cx="1522" cy="320" r="7" fill="#7BFAFF"/>
+      <circle cx="1584" cy="320" r="7" fill="#35C9E5"/>
+      <circle cx="1646" cy="320" r="7" fill="#7BFAFF"/>
+      <circle cx="1398" cy="378" r="7" fill="#35C9E5"/>
+      <circle cx="1460" cy="378" r="7" fill="#7BFAFF"/>
+      <circle cx="1522" cy="378" r="7" fill="#35C9E5"/>
+      <circle cx="1584" cy="378" r="7" fill="#7BFAFF"/>
+      <circle cx="1646" cy="378" r="7" fill="#35C9E5"/>
+    </g>
+
+    <rect x="1290" y="596" width="278" height="180" rx="28" fill="url(#login-panel)" stroke="#72EEFF" stroke-opacity="0.18"/>
+    <path d="M1338 688L1416 628L1498 670L1578 622" stroke="url(#login-accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1338" cy="688" r="10" fill="#8EFFFA"/>
+    <circle cx="1416" cy="628" r="10" fill="#35C9E5"/>
+    <circle cx="1498" cy="670" r="10" fill="#8EFFFA"/>
+    <circle cx="1578" cy="622" r="10" fill="#35C9E5"/>
+  </g>
+
+  <g filter="url(#login-crisp)">
+    <circle cx="964" cy="534" r="238" stroke="url(#login-ring)" stroke-width="18"/>
+    <circle cx="964" cy="534" r="186" stroke="#79F8FF" stroke-opacity="0.22" stroke-width="2" stroke-dasharray="8 18"/>
+    <circle cx="964" cy="534" r="128" fill="#0B1631" fill-opacity="0.26" stroke="#91FDFF" stroke-opacity="0.24"/>
+    <path d="M964 410L1078 458V556C1078 646 1020 718 964 740C908 718 850 646 850 556V458L964 410Z" fill="url(#login-ring)" fill-opacity="0.18" stroke="#8DFBFF" stroke-opacity="0.62" stroke-width="5"/>
+    <path d="M964 470C1012 470 1050 508 1050 556C1050 618 1000 660 964 678C928 660 878 618 878 556C878 508 916 470 964 470Z" fill="#77F7FF" fill-opacity="0.09"/>
+    <rect x="924" y="520" width="80" height="100" rx="18" fill="#0C2249" fill-opacity="0.7" stroke="#8DFBFF" stroke-opacity="0.6" stroke-width="4"/>
+    <path d="M910 518C910 488 934 464 964 464C994 464 1018 488 1018 518V538H986V518C986 506 976 496 964 496C952 496 942 506 942 518V538H910V518Z" fill="#7EFBFF" fill-opacity="0.22" stroke="#8DFBFF" stroke-opacity="0.55" stroke-width="4"/>
+    <circle cx="964" cy="566" r="12" fill="#8DFBFF"/>
+    <path d="M964 578V600" stroke="#8DFBFF" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="1180" cy="460" r="12" fill="#8DFBFF" fill-opacity="0.9"/>
+    <circle cx="1222" cy="534" r="7" fill="#35C9E5"/>
+    <circle cx="1162" cy="654" r="9" fill="#8DFBFF"/>
+    <circle cx="762" cy="624" r="10" fill="#35C9E5"/>
+    <circle cx="744" cy="474" r="7" fill="#8DFBFF"/>
+    <path d="M1180 460L1132 478" stroke="#7CF8FF" stroke-opacity="0.38" stroke-width="3"/>
+    <path d="M1162 654L1114 632" stroke="#7CF8FF" stroke-opacity="0.38" stroke-width="3"/>
+    <path d="M762 624L812 604" stroke="#7CF8FF" stroke-opacity="0.38" stroke-width="3"/>
+    <path d="M744 474L798 492" stroke="#7CF8FF" stroke-opacity="0.38" stroke-width="3"/>
+  </g>
+
+  <g opacity="0.32">
+    <path d="M1328 498C1416 472 1510 474 1596 500" stroke="#8DFBFF" stroke-width="2"/>
+    <path d="M302 610C404 566 514 560 606 578" stroke="#8DFBFF" stroke-width="2"/>
+  </g>
+</svg>

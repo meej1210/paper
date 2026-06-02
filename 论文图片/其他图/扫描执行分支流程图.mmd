@@ -1,0 +1,20 @@
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "SimSun, Microsoft YaHei, Arial", "fontSize": "18px", "primaryColor": "#ffffff", "primaryBorderColor": "#222222", "lineColor": "#222222", "tertiaryColor": "#ffffff"}, "flowchart": {"curve": "linear", "nodeSpacing": 180, "rankSpacing": 42, "htmlLabels": true}} }%%
+flowchart TB
+    A["Celery Worker 接收任务"] --> B{"扫描类型"}
+
+    B -->|SAST| C1["执行静态代码扫描"]
+    B -->|DAST| C2["执行动态应用扫描"]
+    B -->|SCA| C3["执行依赖安全分析"]
+
+    C1 --> D["解析扫描结果"]
+    C2 --> D
+    C3 --> D
+
+    D --> E["生成漏洞与风险数据"]
+    E --> F["写入结果表和问题表"]
+    F --> G["更新任务状态"]
+
+    classDef node fill:#ffffff,stroke:#222222,stroke-width:1.4px,color:#111111;
+    classDef decision fill:#ffffff,stroke:#222222,stroke-width:1.4px,color:#111111;
+    class A,C1,C2,C3,D,E,F,G node;
+    class B decision;

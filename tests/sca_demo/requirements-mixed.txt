@@ -1,0 +1,13 @@
+# SCA demo fixture only. Do not install these versions in a real environment.
+# Mixed dependency set for showing that the scanner can separate risky and
+# non-risky components in the same manifest.
+
+fastapi==0.115.6
+pydantic==2.10.4
+gunicorn==23.0.0
+
+# Intentionally vulnerable / outdated demo dependencies.
+starlette==0.13.2
+PyJWT==1.7.1
+sqlalchemy==1.2.18
+bleach==3.1.0

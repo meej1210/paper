@@ -1,0 +1,252 @@
+{# 报告中复用的 Jinja 宏。 #}
+
+{% macro severity_badge(severity, label=None) -%}
+  {%- set sev = (severity or 'UNKNOWN') | upper -%}
+  <span class="badge sev-{{ sev }}">{{ label or (sev | severity_label) }}</span>
+{%- endmacro %}
+
+{% macro priority_badge(priority) -%}
+  <span class="badge priority-{{ priority }}">{{ priority }}</span>
+{%- endmacro %}
+
+{% macro kpi_tile(label, value, hint=None, accent=False) -%}
+  <div class="kpi-tile{% if accent %} accent{% endif %}">
+    <div class="label">{{ label }}</div>
+    <div class="value">{{ value }}</div>
+    {% if hint %}<div class="hint">{{ hint }}</div>{% endif %}
+  </div>
+{%- endmacro %}
+
+{% macro kv_table(rows) -%}
+  <table class="kv">
+    {% for label, value in rows %}
+      <tr>
+        <th>{{ label }}</th>
+        <td>{{ value | dash }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{%- endmacro %}
+
+{% macro chart_card(title, body, hint=None, wide=False) -%}
+  <div class="chart-card{% if wide %} wide{% endif %}">
+    <div class="chart-title">{{ title }}</div>
+    {% if hint %}<div class="chart-hint">{{ hint }}</div>{% endif %}
+    {{ body | safe }}
+  </div>
+{%- endmacro %}
+
+{% macro toc_entry(href, title) -%}
+  <li>
+    <span class="toc-title"><a href="#{{ href }}" style="color:#0f172a; text-decoration:none;">{{ title }}</a></span>
+    <span class="toc-leader"></span>
+    <span class="toc-page"><a href="#{{ href }}" style="color:#475569; text-decoration:none;"></a></span>
+  </li>
+{%- endmacro %}
+
+{% macro ai_insight_block(insight) -%}
+  {% if insight %}
+    <div class="ai-block">
+      <div class="ai-title">AI 风险解读</div>
+      <dl>
+        <dt>含义</dt><dd>{{ insight.meaning }}</dd>
+        <dt>影响</dt><dd>{{ insight.impact }}</dd>
+        <dt>修复</dt><dd>{{ insight.fix }}</dd>
+        <dt>验证</dt><dd>{{ insight.verify }}</dd>
+      </dl>
+    </div>
+  {% endif %}
+{%- endmacro %}
+
+{% macro issue_card_sast(idx, issue, insight) -%}
+  <article class="issue-card sev-{{ issue.severity }}" id="sast-issue-{{ issue.id }}">
+    <div class="issue-head">
+      <h4><span class="issue-id">SAST-{{ '%04d' % idx }}</span> · {{ issue.rule_label }}</h4>
+      {{ severity_badge(issue.severity) }}
+    </div>
+    <div class="issue-meta">
+      <span><span class="meta-label">优先级</span>{{ priority_badge(issue.priority) }}</span>
+      <span><span class="meta-label">置信度</span>{{ issue.confidence_label }}</span>
+      <span><span class="meta-label">CWE</span>{{ issue.cwe | dash }}</span>
+      <span><span class="meta-label">OWASP</span>{{ issue.owasp_label }}</span>
+      <span><span class="meta-label">位置</span>{{ issue.filename_label }}:{{ issue.line_number | dash }}</span>
+    </div>
+    {% if issue.issue_text %}
+      <div class="issue-section">
+        <div class="label">问题描述</div>
+        <div class="body">{{ issue.issue_text }}</div>
+      </div>
+    {% endif %}
+    {% if issue.code %}
+      <div class="issue-section">
+        <div class="label">代码片段</div>
+        <pre class="code">{{ issue.code }}</pre>
+        {% if issue.code_omitted_lines %}
+          <div class="truncated-note">（已截断，另有 {{ issue.code_omitted_lines }} 行未展示，可在 JSON 报告或在线视图查看完整内容）</div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if issue.more_info %}
+      <div class="issue-section">
+        <div class="label">参考链接</div>
+        <div class="body" style="font-size:9pt; color:#475569;">{{ issue.more_info }}</div>
+      </div>
+    {% endif %}
+    {{ ai_insight_block(insight) }}
+  </article>
+{%- endmacro %}
+
+{% macro issue_card_dast(idx, issue, insight) -%}
+  <article class="issue-card sev-{{ issue.severity }}" id="dast-issue-{{ issue.id }}">
+    <div class="issue-head">
+      <h4><span class="issue-id">DAST-{{ '%04d' % idx }}</span> · {{ issue.category_label }}</h4>
+      {{ severity_badge(issue.severity) }}
+    </div>
+    <div class="issue-meta">
+      <span><span class="meta-label">优先级</span>{{ priority_badge(issue.priority) }}</span>
+      <span><span class="meta-label">CWE</span>{{ issue.cwe | dash }}</span>
+      <span><span class="meta-label">OWASP</span>{{ issue.owasp_label }}</span>
+      <span><span class="meta-label">方法</span>{{ issue.method | dash }}</span>
+      <span><span class="meta-label">路径</span>{{ issue.path | dash }}</span>
+      {% if issue.parameter %}<span><span class="meta-label">参数</span>{{ issue.parameter }}</span>{% endif %}
+    </div>
+    {% if issue.info %}
+      <div class="issue-section">
+        <div class="label">漏洞描述 / 证据</div>
+        <div class="body">{{ issue.info }}</div>
+      </div>
+    {% endif %}
+    {% if issue.curl_command %}
+      <div class="issue-section">
+        <div class="label">复现命令（curl）</div>
+        <pre class="code dim">{{ issue.curl_command }}</pre>
+      </div>
+    {% elif issue.http_request %}
+      <div class="issue-section">
+        <div class="label">HTTP 请求样本</div>
+        <pre class="code dim">{{ issue.http_request }}</pre>
+      </div>
+    {% endif %}
+    {% if issue.wstg %}
+      <div class="issue-section">
+        <div class="label">WSTG 关联</div>
+        <div class="body" style="font-size:9pt;">{{ issue.wstg }}</div>
+      </div>
+    {% endif %}
+    {{ ai_insight_block(insight) }}
+  </article>
+{%- endmacro %}
+
+{% macro issue_card_sca(idx, issue, insight) -%}
+  <article class="issue-card sev-{{ issue.severity }}" id="sca-issue-{{ issue.id }}">
+    <div class="issue-head">
+      <h4><span class="issue-id">SCA-{{ '%04d' % idx }}</span> · {{ issue.package_name }} {{ issue.installed_version | dash }} · {{ issue.vulnerability_id | dash }}</h4>
+      {{ severity_badge(issue.severity) }}
+    </div>
+    <div class="issue-meta">
+      <span><span class="meta-label">优先级</span>{{ priority_badge(issue.priority) }}</span>
+      <span><span class="meta-label">已安装</span>{{ issue.installed_version | dash }}</span>
+      <span><span class="meta-label">修复版本</span>{{ issue.fix_versions_label }}</span>
+      {% if issue.aliases_label %}<span><span class="meta-label">别名</span>{{ issue.aliases_label }}</span>{% endif %}
+    </div>
+    {% if issue.description %}
+      <div class="issue-section">
+        <div class="label">漏洞描述</div>
+        <div class="body">{{ issue.description }}</div>
+      </div>
+    {% endif %}
+    {{ ai_insight_block(insight) }}
+  </article>
+{%- endmacro %}
+
+{% macro severity_groups(issues_by_severity, ai_insights, type) -%}
+  {% set ns = namespace(counter=0) %}
+  {% for sev in severity_order %}
+    {% set group = issues_by_severity.get(sev) %}
+    {% if group %}
+      <div class="severity-group">
+        <div class="severity-group-header">
+          {{ severity_badge(sev) }}
+          <span class="count">共 {{ group.total }} 项{% if group.truncated_count %}（已展示 {{ group.items | length }} 项，余 {{ group.truncated_count }} 项见在线视图）{% endif %}</span>
+        </div>
+        {% for issue in group['items'] %}
+          {% set ns.counter = ns.counter + 1 %}
+          {% if type == 'SAST' %}
+            {{ issue_card_sast(ns.counter, issue, ai_insights.get(issue.id)) }}
+          {% elif type == 'DAST' %}
+            {{ issue_card_dast(ns.counter, issue, ai_insights.get(issue.id)) }}
+          {% else %}
+            {{ issue_card_sca(ns.counter, issue, ai_insights.get(issue.id)) }}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+{%- endmacro %}
+
+{% macro cwe_owasp_table(issues) -%}
+  {% set bucket = {} %}
+  {% for issue in issues %}
+    {% set key = (issue.cwe or '未分类') ~ '||' ~ (issue.owasp_label or '未分类') %}
+    {% if bucket.update({key: bucket.get(key, 0) + 1}) %}{% endif %}
+  {% endfor %}
+  <table class="data">
+    <thead>
+      <tr><th>CWE</th><th>OWASP Top 10 (2021)</th><th class="num">命中次数</th></tr>
+    </thead>
+    <tbody>
+      {% for key, count in bucket.items() | sort(attribute=1, reverse=True) %}
+        {% set parts = key.split('||') %}
+        <tr>
+          <td>{{ parts[0] }}</td>
+          <td>{{ parts[1] }}</td>
+          <td class="num">{{ count }}</td>
+        </tr>
+      {% else %}
+        <tr><td colspan="3" class="muted">无映射数据</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{%- endmacro %}
+
+{% macro remediation_table(remediation_priorities) -%}
+  <table class="data">
+    <thead>
+      <tr>
+        <th style="width:8%">优先级</th>
+        <th style="width:14%">严重程度</th>
+        <th class="num" style="width:10%">问题数</th>
+        <th style="width:18%">建议响应时间</th>
+        <th>建议动作</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in remediation_priorities %}
+        <tr>
+          <td>{{ priority_badge(row.priority) }}</td>
+          <td>{{ severity_badge(row.severity, row.severity_label) }}</td>
+          <td class="num">{{ row.count }}</td>
+          <td>{{ row.timeline }}</td>
+          <td>{{ row.action }}</td>
+        </tr>
+      {% else %}
+        <tr><td colspan="5" class="muted">未识别到需要修复的风险项。</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{%- endmacro %}
+
+{% macro distribution_table(rows, label_col='项目', value_col='次数') -%}
+  <table class="data">
+    <thead>
+      <tr><th>{{ label_col }}</th><th class="num">{{ value_col }}</th></tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+        <tr><td>{{ row.name }}</td><td class="num">{{ row.count }}</td></tr>
+      {% else %}
+        <tr><td colspan="2" class="muted">暂无数据</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{%- endmacro %}

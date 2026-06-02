@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block summary_kpis %}
+  {{ m.kpi_tile('依赖总数', (result.get('dependency_count') or 0) | fmt_num) }}
+  {{ m.kpi_tile('漏洞总数', (result.get('vulnerability_count') or 0) | fmt_num, hint='受影响的依赖版本') }}
+  {{ m.kpi_tile('可修复项', (result.get('fixable_count') or 0) | fmt_num, hint='存在上游修复版本') }}
+  {{ m.kpi_tile('涉及依赖包', (result.get('package_distribution') | length) | fmt_num, hint='不同包名命中') }}
+{% endblock %}
+
+{% block methodology_target %}
+  {{ m.kv_table([
+    ('扫描类型', task_type_label),
+    ('依赖清单', task.target_name or task.target_path or '-'),
+    ('扫描状态', status_label),
+    ('开始时间', task.started_at | dash),
+    ('完成时间', task.finished_at | dash),
+    ('总耗时', task.duration_ms | fmt_duration),
+    ('结果摘要', task.result_summary | dash),
+    ('数据源', 'OSV / PyPI Advisory Database'),
+  ]) }}
+{% endblock %}
+
+{% block overview_charts %}
+  <div class="charts-grid">
+    {{ m.chart_card(
+        '严重程度分布',
+        donut_svg(severity_rollup, center_value=severity_total|string, center_title='漏洞总数', label_resolver=severity_label_fn, size=150, thickness=22),
+        hint='按 CRITICAL → INFO 分布'
+    ) }}
+    {{ m.chart_card(
+        'Top 受影响依赖包（前 8）',
+        hbar_svg(top_distributions.get('packages', []), color='#0ea5e9', width=360, row_height=22, label_width=120, value_width=44, max_label_chars=16)
+    ) }}
+    {{ m.chart_card(
+        'Top 高频漏洞 ID（前 8）',
+        hbar_svg(top_distributions.get('vulnerabilities', []), color='#1d4ed8', width=360, row_height=22, label_width=150, value_width=44, max_label_chars=20)
+    ) }}
+    {{ m.chart_card(
+        '严重程度统计',
+        hbar_svg(severity_breakdown.get('items', []), palette=severity_breakdown.get('palette', {}), width=360, row_height=22, label_width=120, value_width=44, max_label_chars=16)
+    ) }}
+  </div>
+{% endblock %}
+
+{% block appendix_extra %}
+  <h2 class="subsection-title">受影响依赖包 Top 列表</h2>
+  {{ m.distribution_table(top_distributions.get('packages', []), label_col='依赖包', value_col='命中次数') }}
+
+  <h2 class="subsection-title">高频漏洞 ID</h2>
+  {{ m.distribution_table(top_distributions.get('vulnerabilities', []), label_col='漏洞 ID', value_col='命中次数') }}
+{% endblock %}

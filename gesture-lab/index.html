@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>手势光场</title>
+    <link rel="stylesheet" href="/src/styles.css?v=20260527-debug-hands" />
+  </head>
+  <body>
+    <main id="app" class="stage">
+      <video id="camera" class="camera" playsinline muted></video>
+      <canvas id="scene" class="scene" aria-label="手势交互画布"></canvas>
+
+      <header class="mode-bar" aria-label="模式">
+        <button class="mode-button active" data-mode="particles">粒子光感</button>
+        <button class="mode-button" data-mode="write">捏合写字</button>
+        <button class="mode-button" data-mode="frame">双手框选</button>
+      </header>
+
+      <section class="permission" id="permission">
+        <button id="startButton" class="start-button">开启摄像头</button>
+        <p>请允许摄像头以开始互动</p>
+      </section>
+
+      <nav class="tool-bar" aria-label="工具">
+        <button id="videoToggle" class="tool-button active">画面</button>
+        <button id="skeletonToggle" class="tool-button active">骨架</button>
+        <button id="clearButton" class="tool-button">清空</button>
+        <button id="resetButton" class="tool-button">重置</button>
+      </nav>
+
+      <output id="status" class="status">未授权</output>
+      <output id="debugPanel" class="debug-panel" hidden></output>
+    </main>
+    <script type="module" src="/src/main.js?v=20260527-debug-hands"></script>
+  </body>
+</html>

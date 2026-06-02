@@ -1,0 +1,12 @@
+﻿task_type,target,run_idx,duration_ms,http_status,result
+SAST,D:\ziliao\dev\tests\sql_and_injection_demo.py,1,358.09,direct_service,SUCCESS
+SAST,D:\ziliao\dev\tests\sql_and_injection_demo.py,2,322.22,direct_service,SUCCESS
+SAST,D:\ziliao\dev\tests\sql_and_injection_demo.py,3,339.59,direct_service,SUCCESS
+SAST,D:\ziliao\dev\tests\sql_and_injection_demo.py,4,336.26,direct_service,SUCCESS
+SAST,D:\ziliao\dev\tests\sql_and_injection_demo.py,5,317.05,direct_service,SUCCESS
+SCA,D:\ziliao\dev\figures\raw_logs\final_sca_demo.zip,1,18005.85,direct_service,SUCCESS
+SCA,D:\ziliao\dev\figures\raw_logs\final_sca_demo.zip,2,20247.84,direct_service,SUCCESS
+SCA,D:\ziliao\dev\figures\raw_logs\final_sca_demo.zip,3,24646.99,direct_service,SUCCESS
+DAST,http://127.0.0.1:3000,1,6160.22,direct_service,SUCCESS
+DAST,http://127.0.0.1:3000,2,5932.59,direct_service,SUCCESS
+DAST,http://127.0.0.1:3000,3,5812.75,direct_service,SUCCESS

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block summary_kpis %}
+  {{ m.kpi_tile('问题总数', severity_total | fmt_num) }}
+  {{ m.kpi_tile('高危及以上', (severity_rollup.get('CRITICAL', 0) + severity_rollup.get('HIGH', 0)) | fmt_num, hint='合计严重 + 高危') }}
+  {{ m.kpi_tile('高置信度问题', (confidence_distribution.get('HIGH', 0) if confidence_distribution else 0) | fmt_num, hint='置信度 HIGH') }}
+  {{ m.kpi_tile('涉及文件数', (result.get('file_distribution') | length) | fmt_num, hint='不同文件命中') }}
+{% endblock %}
+
+{% block methodology_target %}
+  {{ m.kv_table([
+    ('扫描类型', task_type_label),
+    ('目标路径', task.target_path or task.target_name or '-'),
+    ('扫描状态', status_label),
+    ('开始时间', task.started_at | dash),
+    ('完成时间', task.finished_at | dash),
+    ('总耗时', task.duration_ms | fmt_duration),
+    ('结果摘要', task.result_summary | dash),
+  ]) }}
+{% endblock %}
+
+{% block overview_charts %}
+  <div class="charts-grid">
+    {{ m.chart_card(
+        '严重程度分布',
+        donut_svg(severity_rollup, center_value=severity_total|string, center_title='问题总数', label_resolver=severity_label_fn),
+        hint='按 CRITICAL → INFO 分布，零计数自动隐藏'
+    ) }}
+    {{ m.chart_card(
+        'OWASP Top 10 (2021) 覆盖',
+        radar_svg(owasp_for_radar, axes=owasp_axes, axis_resolver=owasp_label_fn)
+    ) }}
+    {{ m.chart_card(
+        'Top 高频规则（前 8）',
+        hbar_svg(top_distributions.get('rules', []), color='#1d4ed8'),
+        wide=true
+    ) }}
+    {{ m.chart_card(
+        'Top 受影响文件（前 8）',
+        hbar_svg(top_distributions.get('files', []), color='#0ea5e9'),
+        wide=true
+    ) }}
+    {{ m.chart_card(
+        '置信度分布',
+        hbar_svg(top_distributions.get('confidence', []), color='#14b8a6')
+    ) }}
+    {{ m.chart_card(
+        '严重程度统计',
+        hbar_svg(severity_breakdown.get('items', []), palette=severity_breakdown.get('palette', {}))
+    ) }}
+  </div>
+{% endblock %}
+
+{% block appendix_extra %}
+  <h2 class="subsection-title">高频规则全景</h2>
+  {{ m.distribution_table(top_distributions.get('rules', []), label_col='规则', value_col='命中次数') }}
+
+  <h2 class="subsection-title">受影响文件 Top 列表</h2>
+  {{ m.distribution_table(top_distributions.get('files', []), label_col='文件', value_col='命中次数') }}
+{% endblock %}

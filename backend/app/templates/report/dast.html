@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block summary_kpis %}
+  {{ m.kpi_tile('漏洞项总数', (result.get('issue_count') or 0) | fmt_num) }}
+  {{ m.kpi_tile('高风险及以上', (severity_rollup.get('CRITICAL', 0) + severity_rollup.get('HIGH', 0)) | fmt_num, hint='CRITICAL + HIGH') }}
+  {{ m.kpi_tile('异常项', (result.get('anomaly_count') or 0) | fmt_num, hint='扫描中触发的异常响应') }}
+  {{ m.kpi_tile('爬取页面数', (result.get('crawled_pages') or 0) | fmt_num, hint='Wapiti 爬虫覆盖') }}
+{% endblock %}
+
+{% block methodology_target %}
+  {{ m.kv_table([
+    ('扫描类型', task_type_label),
+    ('目标 URL', task.target_url or '-'),
+    ('目标主机', task.target_host or '-'),
+    ('解析 IP', task.target_ip or '-'),
+    ('命中策略', task.target_policy | target_policy_label),
+    ('授权确认', '已确认' if task.authorization_confirmed else '未确认'),
+    ('扫描范围', result.get('scan_scope') or '-'),
+    ('扫描状态', status_label),
+    ('开始时间', task.started_at | dash),
+    ('完成时间', task.finished_at | dash),
+    ('总耗时', task.duration_ms | fmt_duration),
+    ('结果摘要', task.result_summary | dash),
+  ]) }}
+
+  <h2 class="subsection-title">授权边界说明</h2>
+  <p>本次动态扫描严格遵循「授权先行」原则，目标主机 / IP / 策略来源于发起任务时的授权登记。请在使用本报告对接整改、归档或对外披露时，确认授权范围与目标系统所有者的书面确认一致。</p>
+{% endblock %}
+
+{% block overview_charts %}
+  <div class="charts-grid">
+    {{ m.chart_card(
+        '严重程度分布',
+        donut_svg(severity_rollup, center_value=severity_total|string, center_title='漏洞总数', label_resolver=severity_label_fn, size=150, thickness=22),
+        hint='按 CRITICAL → INFO 分布，零计数自动隐藏'
+    ) }}
+    {{ m.chart_card(
+        'OWASP Top 10 (2021) 覆盖',
+        radar_svg(owasp_for_radar, axes=owasp_axes, axis_resolver=owasp_label_fn, size=230)
+    ) }}
+    {{ m.chart_card(
+        '请求方法分布',
+        hbar_svg(top_distributions.get('methods', []), color='#14b8a6', width=360, row_height=22, label_width=120, value_width=44, max_label_chars=16)
+    ) }}
+    {{ m.chart_card(
+        '严重程度统计',
+        hbar_svg(severity_breakdown.get('items', []), palette=severity_breakdown.get('palette', {}), width=360, row_height=22, label_width=120, value_width=44, max_label_chars=16)
+    ) }}
+  </div>
+{% endblock %}
+
+{% block appendix_extra %}
+  <h2 class="subsection-title">漏洞类型 Top 列表</h2>
+  {{ m.distribution_table(top_distributions.get('types', []), label_col='漏洞类型', value_col='命中次数') }}
+
+  <h2 class="subsection-title">受影响路径 Top 列表</h2>
+  {{ m.distribution_table(top_distributions.get('paths', []), label_col='路径', value_col='命中次数') }}
+{% endblock %}

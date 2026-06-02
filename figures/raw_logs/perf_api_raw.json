@@ -1,0 +1,1802 @@
+[
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 1,
+    "status": 200,
+    "elapsed_ms": 102.63949999352917
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 2,
+    "status": 200,
+    "elapsed_ms": 138.3913999889046
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 3,
+    "status": 200,
+    "elapsed_ms": 156.63429998676293
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 4,
+    "status": 200,
+    "elapsed_ms": 181.2659999995958
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 5,
+    "status": 200,
+    "elapsed_ms": 184.12469999748282
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 6,
+    "status": 200,
+    "elapsed_ms": 142.28150001144968
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 7,
+    "status": 200,
+    "elapsed_ms": 116.92100000800565
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 8,
+    "status": 200,
+    "elapsed_ms": 177.16880000079982
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 9,
+    "status": 200,
+    "elapsed_ms": 220.20459998748265
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 10,
+    "status": 500,
+    "elapsed_ms": 38.37260001455434
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 11,
+    "status": 200,
+    "elapsed_ms": 194.57210000837222
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 12,
+    "status": 200,
+    "elapsed_ms": 192.53820000449196
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 13,
+    "status": 200,
+    "elapsed_ms": 128.57500000973232
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 14,
+    "status": 200,
+    "elapsed_ms": 182.32150000403635
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 15,
+    "status": 200,
+    "elapsed_ms": 184.77819999679923
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 16,
+    "status": 200,
+    "elapsed_ms": 153.53929999400862
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 17,
+    "status": 200,
+    "elapsed_ms": 156.39160000137053
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 18,
+    "status": 200,
+    "elapsed_ms": 130.64580000354908
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 19,
+    "status": 200,
+    "elapsed_ms": 172.29700001189485
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 20,
+    "status": 200,
+    "elapsed_ms": 179.5233000011649
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 21,
+    "status": 200,
+    "elapsed_ms": 129.30979998782277
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 22,
+    "status": 200,
+    "elapsed_ms": 117.73319999338128
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 23,
+    "status": 200,
+    "elapsed_ms": 212.4273999943398
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 24,
+    "status": 200,
+    "elapsed_ms": 148.8619000010658
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 25,
+    "status": 200,
+    "elapsed_ms": 143.7181000073906
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 26,
+    "status": 200,
+    "elapsed_ms": 171.42869997769594
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 27,
+    "status": 200,
+    "elapsed_ms": 127.4007000029087
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 28,
+    "status": 200,
+    "elapsed_ms": 112.50489999656565
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 29,
+    "status": 200,
+    "elapsed_ms": 1118.7946000136435
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 30,
+    "status": 200,
+    "elapsed_ms": 173.8416000152938
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 31,
+    "status": 200,
+    "elapsed_ms": 567.5538000068627
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 32,
+    "status": 200,
+    "elapsed_ms": 209.0817000134848
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 33,
+    "status": 200,
+    "elapsed_ms": 224.43259999272414
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 34,
+    "status": 200,
+    "elapsed_ms": 216.39459999278188
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 35,
+    "status": 200,
+    "elapsed_ms": 223.37820002576336
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 36,
+    "status": 200,
+    "elapsed_ms": 187.40100000286475
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 37,
+    "status": 200,
+    "elapsed_ms": 208.58510001562536
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 38,
+    "status": 200,
+    "elapsed_ms": 210.34309998503886
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 39,
+    "status": 200,
+    "elapsed_ms": 182.42100000497885
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 40,
+    "status": 200,
+    "elapsed_ms": 269.3945000064559
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 41,
+    "status": 200,
+    "elapsed_ms": 1677.163099986501
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 42,
+    "status": 200,
+    "elapsed_ms": 125.37970000994392
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 43,
+    "status": 200,
+    "elapsed_ms": 100.20250000525266
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 44,
+    "status": 200,
+    "elapsed_ms": 121.06520001543686
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 45,
+    "status": 200,
+    "elapsed_ms": 104.92860001977533
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 46,
+    "status": 200,
+    "elapsed_ms": 92.36489998875186
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 47,
+    "status": 200,
+    "elapsed_ms": 111.87790002441034
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 48,
+    "status": 200,
+    "elapsed_ms": 117.25810001371428
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 49,
+    "status": 200,
+    "elapsed_ms": 105.60400001122616
+  },
+  {
+    "endpoint": "POST /api/auth/login",
+    "attempt": 50,
+    "status": 200,
+    "elapsed_ms": 96.41679999185726
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 1,
+    "status": 200,
+    "elapsed_ms": 42.248499987181276
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 2,
+    "status": 200,
+    "elapsed_ms": 22.346000012475997
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 3,
+    "status": 200,
+    "elapsed_ms": 12.238199997227639
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 4,
+    "status": 200,
+    "elapsed_ms": 34.27090001059696
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 5,
+    "status": 200,
+    "elapsed_ms": 31.72560001257807
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 6,
+    "status": 200,
+    "elapsed_ms": 31.948999996529892
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 7,
+    "status": 200,
+    "elapsed_ms": 29.18330000829883
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 8,
+    "status": 200,
+    "elapsed_ms": 31.800200027646497
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 9,
+    "status": 200,
+    "elapsed_ms": 29.95980001287535
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 10,
+    "status": 200,
+    "elapsed_ms": 34.542899986263365
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 11,
+    "status": 200,
+    "elapsed_ms": 26.748500007670373
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 12,
+    "status": 200,
+    "elapsed_ms": 31.298399990191683
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 13,
+    "status": 200,
+    "elapsed_ms": 30.950099986512214
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 14,
+    "status": 200,
+    "elapsed_ms": 31.970699987141415
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 15,
+    "status": 200,
+    "elapsed_ms": 12.148499983595684
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 16,
+    "status": 200,
+    "elapsed_ms": 33.844899997347966
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 17,
+    "status": 200,
+    "elapsed_ms": 31.577699992340058
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 18,
+    "status": 200,
+    "elapsed_ms": 31.08119999524206
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 19,
+    "status": 200,
+    "elapsed_ms": 30.237400002079085
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 20,
+    "status": 200,
+    "elapsed_ms": 10.586699994746596
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 21,
+    "status": 200,
+    "elapsed_ms": 10.182900005020201
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 22,
+    "status": 200,
+    "elapsed_ms": 24.434100021608174
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 23,
+    "status": 200,
+    "elapsed_ms": 30.401700001675636
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 24,
+    "status": 200,
+    "elapsed_ms": 32.08559998893179
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 25,
+    "status": 200,
+    "elapsed_ms": 30.12270000181161
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 26,
+    "status": 200,
+    "elapsed_ms": 31.662499997764826
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 27,
+    "status": 200,
+    "elapsed_ms": 30.95389998634346
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 28,
+    "status": 200,
+    "elapsed_ms": 31.93900000769645
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 29,
+    "status": 200,
+    "elapsed_ms": 29.439200006891042
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 30,
+    "status": 200,
+    "elapsed_ms": 31.293900014134124
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 31,
+    "status": 200,
+    "elapsed_ms": 10.463799990247935
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 32,
+    "status": 200,
+    "elapsed_ms": 9.939900017343462
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 33,
+    "status": 200,
+    "elapsed_ms": 9.42879999638535
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 34,
+    "status": 200,
+    "elapsed_ms": 31.25890000956133
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 35,
+    "status": 200,
+    "elapsed_ms": 30.03960000933148
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 36,
+    "status": 200,
+    "elapsed_ms": 10.084400011692196
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 37,
+    "status": 200,
+    "elapsed_ms": 20.320499985245988
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 38,
+    "status": 200,
+    "elapsed_ms": 31.191899994155392
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 39,
+    "status": 200,
+    "elapsed_ms": 30.514499987475574
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 40,
+    "status": 200,
+    "elapsed_ms": 30.315699987113476
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 41,
+    "status": 200,
+    "elapsed_ms": 32.85129999858327
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 42,
+    "status": 200,
+    "elapsed_ms": 29.736399999819696
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 43,
+    "status": 200,
+    "elapsed_ms": 29.947999981231987
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 44,
+    "status": 200,
+    "elapsed_ms": 10.602799971820787
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 45,
+    "status": 200,
+    "elapsed_ms": 20.401099987793714
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 46,
+    "status": 200,
+    "elapsed_ms": 30.07340000476688
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 47,
+    "status": 200,
+    "elapsed_ms": 30.90780001366511
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 48,
+    "status": 200,
+    "elapsed_ms": 30.071200017118827
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 49,
+    "status": 200,
+    "elapsed_ms": 32.278800004860386
+  },
+  {
+    "endpoint": "GET /api/tasks?page=1&page_size=20",
+    "attempt": 50,
+    "status": 200,
+    "elapsed_ms": 30.738300003577024
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 1,
+    "status": 200,
+    "elapsed_ms": 38.7365999922622
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 2,
+    "status": 200,
+    "elapsed_ms": 18.14950001426041
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 3,
+    "status": 200,
+    "elapsed_ms": 39.95700000086799
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 4,
+    "status": 200,
+    "elapsed_ms": 17.865699977846816
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 5,
+    "status": 200,
+    "elapsed_ms": 29.25719998893328
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 6,
+    "status": 200,
+    "elapsed_ms": 31.76720000919886
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 7,
+    "status": 200,
+    "elapsed_ms": 29.22169998055324
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 8,
+    "status": 200,
+    "elapsed_ms": 31.385999987833202
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 9,
+    "status": 200,
+    "elapsed_ms": 19.306100002722815
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 10,
+    "status": 200,
+    "elapsed_ms": 28.47650001058355
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 11,
+    "status": 200,
+    "elapsed_ms": 15.7953999878373
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 12,
+    "status": 200,
+    "elapsed_ms": 30.38789998390712
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 13,
+    "status": 200,
+    "elapsed_ms": 16.253699985099956
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 14,
+    "status": 200,
+    "elapsed_ms": 32.1406000002753
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 15,
+    "status": 200,
+    "elapsed_ms": 17.88149998174049
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 16,
+    "status": 200,
+    "elapsed_ms": 17.12899998528883
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 17,
+    "status": 200,
+    "elapsed_ms": 28.082700009690598
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 18,
+    "status": 200,
+    "elapsed_ms": 31.460999976843596
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 19,
+    "status": 200,
+    "elapsed_ms": 30.929099972127005
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 20,
+    "status": 200,
+    "elapsed_ms": 17.898699996294454
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 21,
+    "status": 200,
+    "elapsed_ms": 29.235499998321757
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 22,
+    "status": 200,
+    "elapsed_ms": 31.186900014290586
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 23,
+    "status": 200,
+    "elapsed_ms": 29.598699999041855
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 24,
+    "status": 200,
+    "elapsed_ms": 31.62810002686456
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 25,
+    "status": 200,
+    "elapsed_ms": 31.950000004144385
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 26,
+    "status": 200,
+    "elapsed_ms": 30.447499972069636
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 27,
+    "status": 200,
+    "elapsed_ms": 30.998500005807728
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 28,
+    "status": 200,
+    "elapsed_ms": 18.202300008852035
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 29,
+    "status": 200,
+    "elapsed_ms": 17.916599987074733
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 30,
+    "status": 200,
+    "elapsed_ms": 42.91599997668527
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 31,
+    "status": 200,
+    "elapsed_ms": 29.228800005512312
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 32,
+    "status": 200,
+    "elapsed_ms": 17.16419999138452
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 33,
+    "status": 200,
+    "elapsed_ms": 30.70760000264272
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 34,
+    "status": 200,
+    "elapsed_ms": 16.618399997241795
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 35,
+    "status": 200,
+    "elapsed_ms": 29.560700000729412
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 36,
+    "status": 200,
+    "elapsed_ms": 30.743000010261312
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 37,
+    "status": 200,
+    "elapsed_ms": 31.09010000480339
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 38,
+    "status": 200,
+    "elapsed_ms": 31.114000012166798
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 39,
+    "status": 200,
+    "elapsed_ms": 16.457099991384894
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 40,
+    "status": 200,
+    "elapsed_ms": 32.21000000485219
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 41,
+    "status": 200,
+    "elapsed_ms": 31.528199993772432
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 42,
+    "status": 200,
+    "elapsed_ms": 28.139100002590567
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 43,
+    "status": 200,
+    "elapsed_ms": 32.29740000097081
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 44,
+    "status": 200,
+    "elapsed_ms": 30.448100005742162
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 45,
+    "status": 200,
+    "elapsed_ms": 17.057999997632578
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 46,
+    "status": 200,
+    "elapsed_ms": 28.85889998287894
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 47,
+    "status": 200,
+    "elapsed_ms": 30.727300007129088
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 48,
+    "status": 200,
+    "elapsed_ms": 31.327799981227145
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 49,
+    "status": 200,
+    "elapsed_ms": 29.266800003824756
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}",
+    "attempt": 50,
+    "status": 200,
+    "elapsed_ms": 30.899400007911026
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 1,
+    "status": 200,
+    "elapsed_ms": 60.31000000075437
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 2,
+    "status": 200,
+    "elapsed_ms": 46.59820001688786
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 3,
+    "status": 200,
+    "elapsed_ms": 45.856499986257404
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 4,
+    "status": 200,
+    "elapsed_ms": 30.551600008038804
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 5,
+    "status": 200,
+    "elapsed_ms": 44.92389998631552
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 6,
+    "status": 200,
+    "elapsed_ms": 32.616900018183514
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 7,
+    "status": 200,
+    "elapsed_ms": 42.70459999679588
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 8,
+    "status": 200,
+    "elapsed_ms": 30.821499996818602
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 9,
+    "status": 200,
+    "elapsed_ms": 47.94459999538958
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 10,
+    "status": 200,
+    "elapsed_ms": 32.319099991582334
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 11,
+    "status": 200,
+    "elapsed_ms": 32.738199981395155
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 12,
+    "status": 200,
+    "elapsed_ms": 42.44509999989532
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 13,
+    "status": 200,
+    "elapsed_ms": 45.56349999620579
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 14,
+    "status": 200,
+    "elapsed_ms": 48.12949997722171
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 15,
+    "status": 200,
+    "elapsed_ms": 30.301299993880093
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 16,
+    "status": 200,
+    "elapsed_ms": 46.8661000195425
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 17,
+    "status": 200,
+    "elapsed_ms": 28.908600012073293
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 18,
+    "status": 200,
+    "elapsed_ms": 50.07800000021234
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 19,
+    "status": 200,
+    "elapsed_ms": 29.80420002131723
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 20,
+    "status": 200,
+    "elapsed_ms": 49.06180000398308
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 21,
+    "status": 200,
+    "elapsed_ms": 30.936900002416223
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 22,
+    "status": 200,
+    "elapsed_ms": 44.961499981582165
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 23,
+    "status": 200,
+    "elapsed_ms": 47.821100015426055
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 24,
+    "status": 200,
+    "elapsed_ms": 46.51919999741949
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 25,
+    "status": 200,
+    "elapsed_ms": 46.01440002443269
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 26,
+    "status": 200,
+    "elapsed_ms": 47.05290001584217
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 27,
+    "status": 200,
+    "elapsed_ms": 44.681300001684576
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 28,
+    "status": 200,
+    "elapsed_ms": 46.26609999104403
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 29,
+    "status": 200,
+    "elapsed_ms": 48.21239999728277
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 30,
+    "status": 200,
+    "elapsed_ms": 45.30269998940639
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 31,
+    "status": 200,
+    "elapsed_ms": 30.08230001432821
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 32,
+    "status": 200,
+    "elapsed_ms": 48.729200003435835
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 33,
+    "status": 200,
+    "elapsed_ms": 50.23480000090785
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 34,
+    "status": 200,
+    "elapsed_ms": 48.20809999364428
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 35,
+    "status": 200,
+    "elapsed_ms": 42.535999993560836
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 36,
+    "status": 200,
+    "elapsed_ms": 27.516699978150427
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 37,
+    "status": 200,
+    "elapsed_ms": 28.676899994025007
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 38,
+    "status": 200,
+    "elapsed_ms": 52.080699999351054
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 39,
+    "status": 200,
+    "elapsed_ms": 46.64730001240969
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 40,
+    "status": 200,
+    "elapsed_ms": 46.23360000550747
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 41,
+    "status": 200,
+    "elapsed_ms": 47.081799973966554
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 42,
+    "status": 200,
+    "elapsed_ms": 43.23789998306893
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 43,
+    "status": 200,
+    "elapsed_ms": 47.886300017125905
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 44,
+    "status": 200,
+    "elapsed_ms": 46.1922999820672
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 45,
+    "status": 200,
+    "elapsed_ms": 49.099800002295524
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 46,
+    "status": 200,
+    "elapsed_ms": 43.36939999484457
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 47,
+    "status": 200,
+    "elapsed_ms": 48.34869998740032
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 48,
+    "status": 200,
+    "elapsed_ms": 29.62610000395216
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 49,
+    "status": 200,
+    "elapsed_ms": 45.1656999939587
+  },
+  {
+    "endpoint": "GET /api/admin/dashboard",
+    "attempt": 50,
+    "status": 200,
+    "elapsed_ms": 29.753899987554178
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 1,
+    "status": 200,
+    "elapsed_ms": 51.26180002116598
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 2,
+    "status": 200,
+    "elapsed_ms": 43.44940002192743
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 3,
+    "status": 200,
+    "elapsed_ms": 27.05990002141334
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 4,
+    "status": 200,
+    "elapsed_ms": 47.45280000497587
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 5,
+    "status": 200,
+    "elapsed_ms": 27.11910000653006
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 6,
+    "status": 200,
+    "elapsed_ms": 55.960900004720315
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 7,
+    "status": 200,
+    "elapsed_ms": 76.86160001321696
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 8,
+    "status": 200,
+    "elapsed_ms": 26.18280000751838
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 9,
+    "status": 200,
+    "elapsed_ms": 50.28719999245368
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 10,
+    "status": 200,
+    "elapsed_ms": 43.87759999372065
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 11,
+    "status": 200,
+    "elapsed_ms": 46.1490000016056
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 12,
+    "status": 200,
+    "elapsed_ms": 27.588400000240654
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 13,
+    "status": 200,
+    "elapsed_ms": 26.992699975380674
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 14,
+    "status": 200,
+    "elapsed_ms": 38.58059999765828
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 15,
+    "status": 200,
+    "elapsed_ms": 27.258199988864362
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 16,
+    "status": 200,
+    "elapsed_ms": 49.800499982666224
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 17,
+    "status": 200,
+    "elapsed_ms": 46.60789997433312
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 18,
+    "status": 200,
+    "elapsed_ms": 47.4054999940563
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 19,
+    "status": 200,
+    "elapsed_ms": 45.40719999931753
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 20,
+    "status": 200,
+    "elapsed_ms": 45.42270000092685
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 21,
+    "status": 200,
+    "elapsed_ms": 27.11799999815412
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 22,
+    "status": 200,
+    "elapsed_ms": 50.8673999866005
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 23,
+    "status": 200,
+    "elapsed_ms": 47.68889999832027
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 24,
+    "status": 200,
+    "elapsed_ms": 44.79149999679066
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 25,
+    "status": 200,
+    "elapsed_ms": 49.14439999265596
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 26,
+    "status": 200,
+    "elapsed_ms": 44.044199981726706
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 27,
+    "status": 200,
+    "elapsed_ms": 47.86030002287589
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 28,
+    "status": 200,
+    "elapsed_ms": 28.493199992226437
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 29,
+    "status": 200,
+    "elapsed_ms": 35.726900008739904
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 30,
+    "status": 200,
+    "elapsed_ms": 46.1461000086274
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 31,
+    "status": 200,
+    "elapsed_ms": 108.83149999426678
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 32,
+    "status": 200,
+    "elapsed_ms": 46.018100023502484
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 33,
+    "status": 200,
+    "elapsed_ms": 28.656100010266528
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 34,
+    "status": 200,
+    "elapsed_ms": 37.63859998434782
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 35,
+    "status": 200,
+    "elapsed_ms": 26.961900002788752
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 36,
+    "status": 200,
+    "elapsed_ms": 27.185199985979125
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 37,
+    "status": 200,
+    "elapsed_ms": 30.396699992707
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 38,
+    "status": 200,
+    "elapsed_ms": 50.856699992436916
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 39,
+    "status": 200,
+    "elapsed_ms": 46.61000001942739
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 40,
+    "status": 200,
+    "elapsed_ms": 45.93000002205372
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 41,
+    "status": 200,
+    "elapsed_ms": 46.06020002393052
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 42,
+    "status": 200,
+    "elapsed_ms": 43.62159999436699
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 43,
+    "status": 200,
+    "elapsed_ms": 50.30760000227019
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 44,
+    "status": 200,
+    "elapsed_ms": 26.81680000387132
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 45,
+    "status": 200,
+    "elapsed_ms": 28.299800003878772
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 46,
+    "status": 200,
+    "elapsed_ms": 28.507199982414022
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 47,
+    "status": 200,
+    "elapsed_ms": 38.89110000454821
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 48,
+    "status": 200,
+    "elapsed_ms": 49.71219997969456
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 49,
+    "status": 200,
+    "elapsed_ms": 44.470900000305846
+  },
+  {
+    "endpoint": "GET /api/audit-logs?page=1",
+    "attempt": 50,
+    "status": 200,
+    "elapsed_ms": 49.434299988206476
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 1,
+    "status": 200,
+    "elapsed_ms": 1620.9349000127986
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 2,
+    "status": 200,
+    "elapsed_ms": 1029.7235999896657
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 3,
+    "status": 200,
+    "elapsed_ms": 1296.9891999964602
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 4,
+    "status": 200,
+    "elapsed_ms": 1150.6208000064362
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 5,
+    "status": 200,
+    "elapsed_ms": 1072.1321000019088
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 6,
+    "status": 200,
+    "elapsed_ms": 1208.129700011341
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 7,
+    "status": 200,
+    "elapsed_ms": 1183.7710999825504
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 8,
+    "status": 200,
+    "elapsed_ms": 1190.2532000094652
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 9,
+    "status": 200,
+    "elapsed_ms": 3175.0449999817647
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 10,
+    "status": 200,
+    "elapsed_ms": 1253.1758999975864
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 11,
+    "status": 200,
+    "elapsed_ms": 1266.080100002
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 12,
+    "status": 200,
+    "elapsed_ms": 1198.280699987663
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 13,
+    "status": 200,
+    "elapsed_ms": 1341.5915000077803
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 14,
+    "status": 200,
+    "elapsed_ms": 1131.335999991279
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 15,
+    "status": 200,
+    "elapsed_ms": 1358.0224000033922
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 16,
+    "status": 200,
+    "elapsed_ms": 1336.6562999726739
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 17,
+    "status": 200,
+    "elapsed_ms": 1238.884299993515
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 18,
+    "status": 200,
+    "elapsed_ms": 1204.5646000187844
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 19,
+    "status": 200,
+    "elapsed_ms": 1078.3889000013005
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 20,
+    "status": 200,
+    "elapsed_ms": 1130.2453999815043
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 21,
+    "status": 200,
+    "elapsed_ms": 1058.077499998035
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 22,
+    "status": 200,
+    "elapsed_ms": 1185.429799981648
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 23,
+    "status": 200,
+    "elapsed_ms": 1178.3010000071954
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 24,
+    "status": 200,
+    "elapsed_ms": 1166.3484000018798
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 25,
+    "status": 200,
+    "elapsed_ms": 1198.6362999887206
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 26,
+    "status": 200,
+    "elapsed_ms": 1079.758200008655
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 27,
+    "status": 200,
+    "elapsed_ms": 1132.4884000059683
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 28,
+    "status": 200,
+    "elapsed_ms": 1073.111500008963
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 29,
+    "status": 200,
+    "elapsed_ms": 1111.5709000150673
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 30,
+    "status": 200,
+    "elapsed_ms": 1126.5520000015385
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 31,
+    "status": 200,
+    "elapsed_ms": 1033.7380999990273
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 32,
+    "status": 200,
+    "elapsed_ms": 1215.3479999979027
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 33,
+    "status": 200,
+    "elapsed_ms": 1085.54900001036
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 34,
+    "status": 200,
+    "elapsed_ms": 1190.2999999874737
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 35,
+    "status": 200,
+    "elapsed_ms": 1105.560299998615
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 36,
+    "status": 200,
+    "elapsed_ms": 1015.0078999868128
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 37,
+    "status": 200,
+    "elapsed_ms": 1160.4834999889135
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 38,
+    "status": 200,
+    "elapsed_ms": 1058.4963999863248
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 39,
+    "status": 200,
+    "elapsed_ms": 1191.991900006542
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 40,
+    "status": 200,
+    "elapsed_ms": 1248.163200012641
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 41,
+    "status": 200,
+    "elapsed_ms": 1195.3323000052478
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 42,
+    "status": 200,
+    "elapsed_ms": 1200.2262999885716
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 43,
+    "status": 200,
+    "elapsed_ms": 1171.1197000113316
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 44,
+    "status": 200,
+    "elapsed_ms": 1143.255600007251
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 45,
+    "status": 200,
+    "elapsed_ms": 1010.1813000219408
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 46,
+    "status": 200,
+    "elapsed_ms": 1120.6709999823943
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 47,
+    "status": 200,
+    "elapsed_ms": 1129.0502000192646
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 48,
+    "status": 200,
+    "elapsed_ms": 1026.4181999955326
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 49,
+    "status": 200,
+    "elapsed_ms": 1159.1499999922235
+  },
+  {
+    "endpoint": "GET /api/sast/tasks/{id}/export?format=pdf",
+    "attempt": 50,
+    "status": 200,
+    "elapsed_ms": 1026.6154000128154
+  }
+]

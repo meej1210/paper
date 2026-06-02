@@ -1,0 +1,30 @@
+flowchart LR
+    U["users<br/>用户表<br/>id(PK)<br/>username<br/>email<br/>role"]
+    T["tasks<br/>扫描任务表<br/>id(PK)<br/>user_id(FK)<br/>task_type<br/>status<br/>scanner_engine"]
+    A["audit_logs<br/>审计日志表<br/>id(PK)<br/>user_id(FK)<br/>action<br/>resource_type"]
+
+    subgraph R["扫描结果汇总表"]
+        direction TB
+        SR["sast_results<br/>task_id(FK, UNIQUE)<br/>issue_count"]
+        DR["dast_results<br/>task_id(FK, UNIQUE)<br/>target_url<br/>issue_count"]
+        CR["sca_results<br/>task_id(FK, UNIQUE)<br/>dependency_count<br/>vulnerability_count"]
+    end
+
+    subgraph I["问题明细表"]
+        direction TB
+        SI["sast_issues<br/>task_id(FK)<br/>test_id<br/>issue_severity"]
+        DI["dast_issues<br/>task_id(FK)<br/>category<br/>level"]
+        CI["sca_issues<br/>task_id(FK)<br/>package_name<br/>vulnerability_id"]
+    end
+
+    AI["ai_issue_insights<br/>AI 解读缓存表<br/>id(PK)<br/>task_id(FK)<br/>issue_id<br/>issue_fingerprint"]
+
+    U -->|1:N 创建| T
+    U -->|1:N 记录| A
+    T -->|1:0..1| SR
+    T -->|1:0..1| DR
+    T -->|1:0..1| CR
+    T -->|1:N| SI
+    T -->|1:N| DI
+    T -->|1:N| CI
+    T -->|1:N 缓存| AI

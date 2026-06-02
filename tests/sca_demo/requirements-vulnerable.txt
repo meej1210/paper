@@ -1,0 +1,14 @@
+# SCA demo fixture only. Do not install these versions in a real environment.
+# These versions are intentionally old so the platform can demonstrate
+# component identification, vulnerability matching, severity grouping and
+# upgrade recommendations.
+
+Django==2.2.0
+Flask==0.12.2
+Jinja2==2.10
+PyYAML==5.1
+requests==2.19.1
+urllib3==1.24.1
+cryptography==2.3
+Pillow==6.2.0
+Werkzeug==0.14.1

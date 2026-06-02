@@ -1,0 +1,20 @@
+flowchart TD
+    A[开始测试准备] --> B{测试类型}
+    B -->|自动化测试| C[进入项目根目录]
+    C --> D[运行 pytest 后端测试]
+    D --> E[进入 frontend 目录]
+    E --> F[运行 npm run build]
+    F --> G[记录测试与构建输出]
+
+    B -->|演示联调| H[执行 start_demo_env.ps1]
+    H --> I[启动 Redis]
+    H --> J[启动后端 API]
+    H --> K[启动 Celery Worker]
+    H --> L[启动前端 Vite 服务]
+    H --> M{是否测试 DAST}
+    M -->|是| N[启动本地靶场容器]
+    M -->|否| O[跳过靶场启动]
+    N --> P[访问 /api/health]
+    O --> P
+    P --> Q[浏览器打开前端页面]
+    Q --> R[执行功能、安全、性能和兼容性验证]

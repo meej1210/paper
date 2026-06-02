@@ -1,0 +1,103 @@
+erDiagram
+    USERS ||--o{ TASKS : creates
+    USERS ||--o{ AUDIT_LOGS : records
+    TASKS ||--o| SAST_RESULTS : has
+    TASKS ||--o{ SAST_ISSUES : contains
+    TASKS ||--o| DAST_RESULTS : has
+    TASKS ||--o{ DAST_ISSUES : contains
+    TASKS ||--o| SCA_RESULTS : has
+    TASKS ||--o{ SCA_ISSUES : contains
+    TASKS ||--o{ AI_ISSUE_INSIGHTS : caches
+
+    USERS {
+        int id PK
+        string username
+        string email
+        string password_hash
+        string role
+        boolean is_active
+    }
+
+    TASKS {
+        int id PK
+        int user_id FK
+        string task_type
+        string task_name
+        string status
+        int progress
+        string target_path
+        string target_url
+        string scanner_engine
+        string report_path
+    }
+
+    SAST_RESULTS {
+        int id PK
+        int task_id FK
+        int issue_count
+        string severity_distribution
+        string raw_report_path
+    }
+
+    SAST_ISSUES {
+        int id PK
+        int task_id FK
+        string test_id
+        string issue_severity
+        string filename
+        int line_number
+    }
+
+    DAST_RESULTS {
+        int id PK
+        int task_id FK
+        string target_url
+        boolean is_timeout
+        int issue_count
+        string severity_distribution
+    }
+
+    DAST_ISSUES {
+        int id PK
+        int task_id FK
+        string category
+        string level
+        string path
+        string parameter
+    }
+
+    SCA_RESULTS {
+        int id PK
+        int task_id FK
+        int dependency_count
+        int vulnerability_count
+        int fixable_count
+    }
+
+    SCA_ISSUES {
+        int id PK
+        int task_id FK
+        string package_name
+        string installed_version
+        string vulnerability_id
+        string severity
+    }
+
+    AUDIT_LOGS {
+        int id PK
+        int user_id FK
+        string action
+        string resource_type
+        string resource_id
+        string ip_address
+        datetime created_at
+    }
+
+    AI_ISSUE_INSIGHTS {
+        int id PK
+        int task_id FK
+        string task_type
+        string issue_id
+        string issue_fingerprint
+        string model_name
+    }

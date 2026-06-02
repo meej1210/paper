@@ -1,0 +1,16 @@
+stateDiagram-v2
+    [*] --> PENDING: 创建任务
+    PENDING --> RUNNING: Worker 开始执行
+    PENDING --> CANCELLED: 用户取消
+    RUNNING --> SUCCESS: 扫描成功
+    RUNNING --> FAILED: 扫描失败
+    RUNNING --> TIMEOUT: 扫描超时
+    RUNNING --> CANCELLED: 用户取消或撤销队列任务
+    SUCCESS --> PENDING: 重新运行生成新任务
+    FAILED --> PENDING: 重新运行生成新任务
+    TIMEOUT --> PENDING: 重新运行生成新任务
+    CANCELLED --> PENDING: 重新运行生成新任务
+    SUCCESS --> [*]
+    FAILED --> [*]
+    TIMEOUT --> [*]
+    CANCELLED --> [*]

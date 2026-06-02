@@ -1,0 +1,100 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dast-main" x1="308" y1="218" x2="1606" y2="910" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A3FFFF"/>
+      <stop offset="0.44" stop-color="#42D1EA"/>
+      <stop offset="1" stop-color="#0D5E8E"/>
+    </linearGradient>
+    <linearGradient id="dast-panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#114F7C" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#09142D" stop-opacity="0.14"/>
+    </linearGradient>
+    <linearGradient id="dast-warn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD69C"/>
+      <stop offset="1" stop-color="#FF8C3A"/>
+    </linearGradient>
+    <radialGradient id="dast-haze" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(948 536) rotate(90) scale(410 576)">
+      <stop offset="0" stop-color="#7BF9FF" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#7BF9FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dast-soft" x="-200" y="-200" width="2320" height="1480" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="48"/>
+    </filter>
+    <filter id="dast-shadow" x="-80" y="-80" width="2080" height="1240" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#06162F" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#dast-soft)">
+    <circle cx="948" cy="536" r="330" fill="url(#dast-haze)"/>
+    <circle cx="392" cy="670" r="250" fill="#39BEE8" fill-opacity="0.12"/>
+    <circle cx="1548" cy="332" r="236" fill="#7BF9FF" fill-opacity="0.1"/>
+  </g>
+
+  <g opacity="0.18">
+    <path d="M252 780C430 666 630 620 816 632C1020 646 1166 742 1360 762C1500 776 1608 756 1698 706" stroke="#94FEFF" stroke-width="2"/>
+    <path d="M260 308C426 362 604 396 810 382C1024 366 1198 288 1388 262C1498 246 1606 250 1706 286" stroke="#94FEFF" stroke-width="2"/>
+  </g>
+
+  <g filter="url(#dast-shadow)">
+    <rect x="240" y="288" width="820" height="462" rx="40" fill="url(#dast-panel)" stroke="#94FEFF" stroke-opacity="0.24"/>
+    <rect x="240" y="288" width="820" height="84" rx="40" fill="#0B1732" fill-opacity="0.3"/>
+    <circle cx="316" cy="330" r="10" fill="#94FEFF" fill-opacity="0.8"/>
+    <circle cx="360" cy="330" r="10" fill="#49D1E9" fill-opacity="0.7"/>
+    <circle cx="404" cy="330" r="10" fill="url(#dast-warn)" fill-opacity="0.85"/>
+    <rect x="320" y="446" width="342" height="176" rx="24" fill="#09162F" fill-opacity="0.34" stroke="#94FEFF" stroke-opacity="0.22"/>
+    <path d="M704 520C820 448 930 430 1040 448" stroke="#94FEFF" stroke-opacity="0.22" stroke-width="4" stroke-linecap="round"/>
+    <path d="M708 560C830 520 938 520 1044 562" stroke="#94FEFF" stroke-opacity="0.16" stroke-width="4" stroke-linecap="round"/>
+    <path d="M732 652C842 690 942 688 1034 640" stroke="#94FEFF" stroke-opacity="0.16" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#dast-shadow)">
+    <circle cx="512" cy="534" r="122" fill="#0C1B39" fill-opacity="0.5" stroke="#94FEFF" stroke-opacity="0.48" stroke-width="5"/>
+    <circle cx="512" cy="534" r="88" stroke="#94FEFF" stroke-opacity="0.28" stroke-width="3"/>
+    <circle cx="512" cy="534" r="54" stroke="#94FEFF" stroke-opacity="0.18" stroke-width="2"/>
+    <path d="M512 534L602 466" stroke="url(#dast-main)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M512 534L620 556" stroke="#94FEFF" stroke-opacity="0.38" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="512" cy="534" r="12" fill="#94FEFF"/>
+    <circle cx="602" cy="466" r="10" fill="url(#dast-warn)"/>
+  </g>
+
+  <g filter="url(#dast-shadow)">
+    <path d="M1262 262L1398 330V460C1398 554 1338 632 1262 672C1186 632 1126 554 1126 460V330L1262 262Z" fill="#0C1834" fill-opacity="0.34" stroke="#94FEFF" stroke-opacity="0.5" stroke-width="5"/>
+    <path d="M1262 352C1330 352 1386 408 1386 476C1386 562 1320 628 1262 664C1204 628 1138 562 1138 476C1138 408 1194 352 1262 352Z" stroke="#94FEFF" stroke-opacity="0.2" stroke-width="3" stroke-dasharray="10 14"/>
+    <circle cx="1262" cy="476" r="78" stroke="url(#dast-main)" stroke-width="10"/>
+    <path d="M1262 476L1324 430" stroke="#94FEFF" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1262 476L1262 390" stroke="#94FEFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.42"/>
+    <path d="M1262 476L1354 500" stroke="#94FEFF" stroke-width="5" stroke-linecap="round" stroke-opacity="0.28"/>
+    <circle cx="1262" cy="476" r="10" fill="#94FEFF"/>
+  </g>
+
+  <g filter="url(#dast-shadow)">
+    <rect x="1466" y="420" width="252" height="120" rx="26" fill="url(#dast-panel)" stroke="#94FEFF" stroke-opacity="0.24"/>
+    <rect x="1506" y="474" width="172" height="12" rx="6" fill="#94FEFF" fill-opacity="0.16"/>
+    <rect x="1506" y="508" width="118" height="12" rx="6" fill="#94FEFF" fill-opacity="0.1"/>
+    <rect x="1466" y="588" width="252" height="120" rx="26" fill="url(#dast-panel)" stroke="#94FEFF" stroke-opacity="0.24"/>
+    <rect x="1506" y="642" width="172" height="12" rx="6" fill="#94FEFF" fill-opacity="0.16"/>
+    <rect x="1506" y="676" width="118" height="12" rx="6" fill="#94FEFF" fill-opacity="0.1"/>
+    <path d="M1398 476H1466" stroke="#94FEFF" stroke-opacity="0.42" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1398 640H1466" stroke="#94FEFF" stroke-opacity="0.42" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1262 562C1262 608 1300 646 1344 646H1466" stroke="#94FEFF" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="1418" cy="476" r="8" fill="url(#dast-warn)"/>
+    <circle cx="1392" cy="640" r="8" fill="#49D1E9"/>
+  </g>
+
+  <g filter="url(#dast-shadow)">
+    <path d="M640 660C760 706 900 710 1016 640" stroke="url(#dast-main)" stroke-opacity="0.5" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="640" cy="660" r="12" fill="#94FEFF"/>
+    <circle cx="760" cy="700" r="10" fill="#49D1E9"/>
+    <circle cx="900" cy="690" r="10" fill="#94FEFF"/>
+    <circle cx="1016" cy="640" r="12" fill="url(#dast-warn)"/>
+    <path d="M640 660L760 700L900 690L1016 640" stroke="#94FEFF" stroke-opacity="0.18" stroke-width="2"/>
+  </g>
+
+  <g opacity="0.5">
+    <circle cx="222" cy="840" r="7" fill="#94FEFF"/>
+    <circle cx="856" cy="194" r="6" fill="#49D1E9"/>
+    <circle cx="1640" cy="220" r="7" fill="#94FEFF"/>
+    <circle cx="1740" cy="794" r="6" fill="url(#dast-warn)"/>
+  </g>
+</svg>

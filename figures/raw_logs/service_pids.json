@@ -1,0 +1,8 @@
+﻿{
+    "api_out":  "D:\\ziliao\\dev\\figures\\raw_logs\\api_run.out.log",
+    "worker_out":  "D:\\ziliao\\dev\\figures\\raw_logs\\celery_worker.out.log",
+    "api_pid":  34440,
+    "api_err":  "D:\\ziliao\\dev\\figures\\raw_logs\\api_run.err.log",
+    "worker_err":  "D:\\ziliao\\dev\\figures\\raw_logs\\celery_worker.err.log",
+    "worker_pid":  42280
+}

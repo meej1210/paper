@@ -1,0 +1,6 @@
+# SCA demo fixture only. Do not install these versions in a real environment.
+Django==2.2.0
+Flask==0.12.2
+requests==2.19.1
+PyYAML==5.1
+Jinja2==2.10

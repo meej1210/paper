@@ -1,0 +1,208 @@
+<!doctype html>
+{% import '_macros.html' as m %}
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ task_type_label_full }} · {{ meta.report_no }}</title>
+  <style>
+    {% include '_styles.css.jinja' %}
+  </style>
+</head>
+<body class="report report-{{ task_type | lower }}">
+
+{# ---------- COVER ---------- #}
+{% block cover %}
+<section class="cover">
+  <div class="cover-brand"><span class="dot"></span>{{ meta.platform_name }}</div>
+
+  <div class="cover-main">
+    <div class="cover-headline">
+      <div class="cover-title">{{ task_type_label_full }}</div>
+      <div class="cover-sub">{{ task.task_name | default('未命名任务', true) }}</div>
+      <span class="cover-band sev-{{ risk_band }}">总体风险：{{ risk_band_label }}（{{ risk_band_description }}）</span>
+    </div>
+
+    <div class="cover-score">
+      <div class="label">风险综合评分</div>
+      <div class="value">{{ risk_score }}</div>
+      <div class="band">{{ risk_band_label }} 级</div>
+    </div>
+  </div>
+
+  <dl class="cover-meta">
+    <div><dt>报告编号</dt><dd>{{ meta.report_no }}</dd></div>
+    <div><dt>报告版本</dt><dd>{{ meta.report_version }}</dd></div>
+    <div><dt>任务 ID</dt><dd>#{{ task.id }} · 用户内编号 {{ task.user_task_no }}</dd></div>
+    <div><dt>扫描引擎</dt><dd>{{ engine_meta.engine_name }} {{ kb_versions.get(engine_meta.engine_key, '') }}</dd></div>
+    <div><dt>扫描对象</dt><dd>{{ task.target_url or task.target_name or task.target_path or '-' }}</dd></div>
+    <div><dt>扫描状态</dt><dd>{{ status_label }}</dd></div>
+    <div><dt>开始时间</dt><dd>{{ task.started_at | dash }}</dd></div>
+    <div><dt>结束时间</dt><dd>{{ task.finished_at | dash }}</dd></div>
+    <div><dt>耗时</dt><dd>{{ task.duration_ms | fmt_duration }}</dd></div>
+    <div><dt>执行账户</dt><dd>{{ executed_by.display_name }}</dd></div>
+    <div><dt>生成时间</dt><dd>{{ meta.generated_at }}</dd></div>
+    <div><dt>保密级别</dt><dd>{{ meta.confidentiality }}</dd></div>
+  </dl>
+
+  <div class="cover-footer">
+    <span>本报告由 {{ meta.platform_name }} 自动生成</span>
+    <span>© {{ meta.generated_date[:4] }} · 请勿外传</span>
+  </div>
+</section>
+{% endblock %}
+
+{# ---------- TOC ---------- #}
+{% block toc %}
+<section class="toc">
+  <h1>目录</h1>
+  <ol class="toc-list">
+    {{ m.toc_entry('sec-summary', '一、执行摘要') }}
+    {{ m.toc_entry('sec-methodology', '二、扫描范围与方法学') }}
+    {{ m.toc_entry('sec-overview', '三、风险态势概览') }}
+    {{ m.toc_entry('sec-findings', '四、详细发现') }}
+    {{ m.toc_entry('sec-mapping', '五、CWE 与 OWASP 映射') }}
+    {{ m.toc_entry('sec-remediation', '六、整改优先级与路线图') }}
+    {{ m.toc_entry('sec-appendix', '七、附录') }}
+  </ol>
+</section>
+{% endblock %}
+
+{# ---------- EXECUTIVE SUMMARY ---------- #}
+{% block summary %}
+<section class="major" id="sec-summary">
+  <h1 class="section-title">执行摘要</h1>
+
+  <p class="section-lead">{{ analysis.headline or ('本次扫描结果概览，详见后续章节。') }}</p>
+
+  <div class="kpi-grid">
+    {{ m.kpi_tile('风险综合评分', risk_score, hint=(risk_band_label ~ ' 级'), accent=true) }}
+    {% block summary_kpis %}{% endblock %}
+  </div>
+
+  <h2 class="subsection-title">严重程度分布</h2>
+  {{ severity_bar_svg(severity_rollup, label_resolver=severity_label_fn) | safe }}
+
+  {% if analysis.highlights %}
+    <h2 class="subsection-title">关键发现</h2>
+    <ul class="tight">
+      {% for item in analysis.highlights %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if analysis.recommendations %}
+    <h2 class="subsection-title">优先建议</h2>
+    <ul class="tight">
+      {% for item in analysis.recommendations %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+</section>
+{% endblock %}
+
+{# ---------- METHODOLOGY ---------- #}
+{% block methodology %}
+<section class="major" id="sec-methodology">
+  <h1 class="section-title">扫描范围与方法学</h1>
+
+  <h2 class="subsection-title">扫描对象</h2>
+  {% block methodology_target %}{% endblock %}
+
+  <h2 class="subsection-title">扫描引擎与知识库</h2>
+  {{ m.kv_table([
+    ('扫描引擎', engine_meta.engine_name),
+    ('引擎说明', engine_meta.engine_description),
+    ('引擎版本', kb_versions.get(engine_meta.engine_key, '-')),
+    ('其他参考版本', kb_other_summary),
+    ('风险分类标准', 'OWASP Top 10 (2021) + CWE'),
+    ('生成日期', meta.generated_date),
+  ]) }}
+
+  <h2 class="subsection-title">方法学说明</h2>
+  <p>本次扫描采用「自动化引擎 + 知识库映射 + 风险加权评分」三阶段流程：</p>
+  <ol class="tight">
+    <li><strong>采集与扫描</strong>：由 {{ engine_meta.engine_name }} 对目标进行自动化扫描，产出原始问题与证据。</li>
+    <li><strong>归一化与映射</strong>：平台将原始问题按内部 schema 归一化，并补全 CWE / OWASP Top 10 映射。</li>
+    <li><strong>风险加权与评分</strong>：按严重程度（CRITICAL/HIGH/MEDIUM/LOW/INFO）加权求和，再经饱和函数压缩到 0~100 分，避免大型项目分数刷顶。</li>
+  </ol>
+</section>
+{% endblock %}
+
+{# ---------- RISK OVERVIEW ---------- #}
+{% block overview %}
+<section class="major" id="sec-overview">
+  <h1 class="section-title">风险态势概览</h1>
+  {% block overview_charts %}{% endblock %}
+</section>
+{% endblock %}
+
+{# ---------- DETAILED FINDINGS ---------- #}
+{% block findings %}
+<section class="major" id="sec-findings">
+  <h1 class="section-title">详细发现</h1>
+  {% if severity_total == 0 %}
+    <p class="muted">本次扫描未识别到风险项，建议保持基线扫描频率。</p>
+  {% else %}
+    <p class="section-lead">下列发现按严重程度从高到低排列，每条均包含定位、证据与修复建议；如启用了 AI 解读，将在卡片末尾以蓝色块呈现含义/影响/修复/验证四要素。</p>
+    {{ m.severity_groups(issues_by_severity, ai_insights, task_type) }}
+  {% endif %}
+</section>
+{% endblock %}
+
+{# ---------- CWE/OWASP MAPPING ---------- #}
+{% block mapping %}
+<section class="major" id="sec-mapping">
+  <h1 class="section-title">CWE 与 OWASP 映射</h1>
+  <p class="section-lead">下表汇总所有已识别问题对应的 CWE 弱点编号与 OWASP Top 10 (2021) 类别，便于按类别复盘整改投入。</p>
+  {{ m.cwe_owasp_table(issues) }}
+</section>
+{% endblock %}
+
+{# ---------- REMEDIATION ROADMAP ---------- #}
+{% block remediation %}
+<section class="major" id="sec-remediation">
+  <h1 class="section-title">整改优先级与路线图</h1>
+  <p class="section-lead">优先级分级遵循「严重程度 → 修复时窗」的对应关系，建议结合项目实际节奏排入迭代或紧急响应。</p>
+  {{ m.remediation_table(remediation_priorities) }}
+
+  <h2 class="subsection-title">推荐响应流程</h2>
+  <ol class="tight">
+    <li>P0 与 P1 项目：成立由安全工程师 + 业务负责人 + 测试组成的联合小组，72 小时内出方案。</li>
+    <li>P2 项目：归入下一迭代里程碑，提交变更后必须再次跑相同类型扫描，确认风险闭环。</li>
+    <li>P3 项目：录入安全债务列表，按季度回顾，必要时合并修复。</li>
+    <li>每次修复后请回到本平台重新执行扫描，以便对比修复前后的评分与剩余风险面。</li>
+  </ol>
+</section>
+{% endblock %}
+
+{# ---------- APPENDIX ---------- #}
+{% block appendix %}
+<section class="major" id="sec-appendix">
+  <h1 class="section-title">附录</h1>
+
+  <h2 class="subsection-title">严重程度定义</h2>
+  <table class="data">
+    <thead><tr><th>等级</th><th>定义</th></tr></thead>
+    <tbody>
+      <tr><td>{{ m.severity_badge('CRITICAL') }}</td><td>可被立即利用并产生重大业务/数据影响，须立即响应。</td></tr>
+      <tr><td>{{ m.severity_badge('HIGH') }}</td><td>已有较高利用可能性，建议在本周内修复并验证。</td></tr>
+      <tr><td>{{ m.severity_badge('MEDIUM') }}</td><td>需要特定条件才能利用，建议在下个迭代内修复。</td></tr>
+      <tr><td>{{ m.severity_badge('LOW') }}</td><td>风险较低或暴露面有限，纳入定期清理。</td></tr>
+      <tr><td>{{ m.severity_badge('INFO') }}</td><td>提示类信息或基线偏离，仅作记录。</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="subsection-title">引擎说明</h2>
+  {{ m.kv_table([
+    ('扫描引擎', engine_meta.engine_name),
+    ('引擎说明', engine_meta.engine_description),
+    ('当前版本', kb_versions.get(engine_meta.engine_key, '-')),
+  ]) }}
+
+  {% block appendix_extra %}{% endblock %}
+
+  <h2 class="subsection-title">免责声明</h2>
+  <p>本报告由 {{ meta.platform_name }} 自动生成，已在生成时尽量保证准确性。但自动化扫描受限于规则覆盖范围与目标可访问性，可能存在误报或漏报。所列建议仅供修复参考，最终修复方案应结合业务现状由安全工程师评估后实施。报告内容标注为「{{ meta.confidentiality }}」，未经授权请勿外传。</p>
+</section>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "SimSun, Microsoft YaHei, Arial", "fontSize": "18px", "primaryColor": "#ffffff", "primaryBorderColor": "#222222", "lineColor": "#222222", "tertiaryColor": "#ffffff"}, "flowchart": {"curve": "linear", "nodeSpacing": 260, "rankSpacing": 48, "htmlLabels": true}} }%%
+flowchart TB
+    A["Celery Worker 执行扫描"] --> B["解析扫描结果"]
+    B --> C["写入结果表<br/>和问题表"]
+    B --> D["更新任务状态<br/>和报告路径"]
+    C --> E["前端查看详情<br/>或导出报告"]
+    D --> E
+    E --> F["记录审计日志"]
+
+    classDef node fill:#ffffff,stroke:#222222,stroke-width:1.4px,color:#111111;
+    class A,B,C,D,E,F node;

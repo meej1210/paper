@@ -1,0 +1,7 @@
+﻿endpoint,n,min,p50,p95,max,mean
+POST /api/auth/login,50,38.37,164.03,433.38,1677.16,214.81
+GET /api/tasks?page=1&page_size=20,50,9.43,30.36,34.08,42.25,26.89
+GET /api/sast/tasks/{id},50,15.8,29.99,35.84,42.92,27.43
+GET /api/admin/dashboard,50,27.52,45.71,50.16,60.31,42.34
+GET /api/audit-logs?page=1,50,26.18,45.1,53.85,108.83,42.56
+GET /api/sast/tasks/{id}/export?format=pdf,50,1010.18,1163.42,1350.63,3175.04,1205.24

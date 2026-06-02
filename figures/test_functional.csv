@@ -1,0 +1,10 @@
+﻿module,cases,passed,failed,failure_summary
+Auth,3,3,0,
+Task Management,6,6,0,
+SAST,6,6,0,
+DAST,6,6,0,
+SCA,13,13,0,
+Report Export,3,3,0,
+Audit Logs,2,2,0,
+Admin Dashboard,13,13,0,
+AI Analysis,5,5,0,

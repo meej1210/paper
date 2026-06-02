@@ -1,0 +1,128 @@
+[
+  {
+    "category": "Access Control",
+    "case_name": "User A reads User B task",
+    "payload_summary": "task_id=85",
+    "http_status": 404,
+    "expected": "[403, 404] blocked",
+    "actual": "task not found",
+    "passed": "yes"
+  },
+  {
+    "category": "Access Control",
+    "case_name": "User A downloads User B report",
+    "payload_summary": "task_id=85",
+    "http_status": 404,
+    "expected": "[403, 404] blocked",
+    "actual": "task not found",
+    "passed": "yes"
+  },
+  {
+    "category": "Access Control",
+    "case_name": "Normal user opens admin dashboard",
+    "payload_summary": "/api/admin/dashboard",
+    "http_status": 403,
+    "expected": "[403] forbidden",
+    "actual": "permission denied",
+    "passed": "yes"
+  },
+  {
+    "category": "Injection",
+    "case_name": "Login SQL payload",
+    "payload_summary": "' OR '1'='1",
+    "http_status": 401,
+    "expected": "[400, 401, 429] not authenticated",
+    "actual": "unauthorized",
+    "passed": "yes"
+  },
+  {
+    "category": "Injection",
+    "case_name": "Task type SQL payload",
+    "payload_summary": "task_type=' OR '1'='1",
+    "http_status": 400,
+    "expected": "[400] invalid value",
+    "actual": "invalid parameters",
+    "passed": "yes"
+  },
+  {
+    "category": "Injection",
+    "case_name": "Audit keyword XSS payload",
+    "payload_summary": "<script>alert(1)</script>",
+    "http_status": 200,
+    "expected": "[200] handled as data",
+    "actual": "ok",
+    "passed": "yes"
+  },
+  {
+    "category": "File Upload",
+    "case_name": "Oversized file",
+    "payload_summary": "21MB .py",
+    "http_status": 400,
+    "expected": "[400, 413] rejected",
+    "actual": "file size exceeds limit",
+    "passed": "yes"
+  },
+  {
+    "category": "File Upload",
+    "case_name": "Executable extension",
+    "payload_summary": ".exe",
+    "http_status": 400,
+    "expected": "[400] unsupported type",
+    "actual": "unsupported file type",
+    "passed": "yes"
+  },
+  {
+    "category": "File Upload",
+    "case_name": "Path traversal filename",
+    "payload_summary": "../../etc/passwd",
+    "http_status": 400,
+    "expected": "[400] rejected or neutralized",
+    "actual": "unsupported file type",
+    "passed": "yes"
+  },
+  {
+    "category": "File Upload",
+    "case_name": "Empty file",
+    "payload_summary": "0 byte .py",
+    "http_status": 201,
+    "expected": "[400, 422] rejected",
+    "actual": "sast task created",
+    "passed": "no"
+  },
+  {
+    "category": "Token Invalid",
+    "case_name": "Expired token",
+    "payload_summary": "expires_delta=-1s",
+    "http_status": 401,
+    "expected": "[401] token expired",
+    "actual": "{'msg': 'Token has expired'}",
+    "passed": "yes"
+  },
+  {
+    "category": "Token Invalid",
+    "case_name": "Forged signature token",
+    "payload_summary": "modified signature",
+    "http_status": 422,
+    "expected": "[401, 422] token rejected",
+    "actual": "{'msg': 'Signature verification failed'}",
+    "passed": "yes"
+  },
+  {
+    "category": "Token Invalid",
+    "case_name": "Missing Authorization",
+    "payload_summary": "no header",
+    "http_status": 401,
+    "expected": "[401] missing token",
+    "actual": "{'msg': 'Missing Authorization Header'}",
+    "passed": "yes"
+  },
+  {
+    "category": "Token Invalid",
+    "case_name": "Wrong auth scheme",
+    "payload_summary": "Token abc",
+    "http_status": 401,
+    "expected": "[401, 422] malformed header",
+    "actual": "{'msg': \"Missing 'Bearer' type in 'Authorization' header. Expected 'Authorization: Bearer <JWT>'\"}",
+    "passed": "yes"
+  }
+]

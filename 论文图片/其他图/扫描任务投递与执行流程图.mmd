@@ -1,0 +1,18 @@
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "SimSun, Microsoft YaHei, Arial", "fontSize": "18px", "primaryColor": "#ffffff", "primaryBorderColor": "#222222", "lineColor": "#222222", "tertiaryColor": "#ffffff"}, "flowchart": {"curve": "linear", "nodeSpacing": 430, "rankSpacing": 42, "htmlLabels": true}} }%%
+flowchart TB
+    A["创建 Task 主记录"] --> B{"运行模式"}
+
+    B -->|测试同步模式| C1["当前进程执行扫描"]
+    B -->|真实异步模式| C2["投递 Redis 队列"]
+
+    C2 --> D2["Celery Worker 执行扫描"]
+    C1 --> E["更新扫描结果"]
+    D2 --> E
+
+    E --> F["更新任务状态"]
+    F --> G["记录执行日志"]
+
+    classDef node fill:#ffffff,stroke:#222222,stroke-width:1.4px,color:#111111;
+    classDef decision fill:#ffffff,stroke:#222222,stroke-width:1.4px,color:#111111;
+    class A,C1,C2,D2,E,F,G node;
+    class B decision;

@@ -1,0 +1,68 @@
+[
+  {
+    "script": "smoke_test.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test.out.log",
+    "err": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test.err.log"
+  },
+  {
+    "script": "smoke_test_extra.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_extra.out.log",
+    "err": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_extra.err.log"
+  },
+  {
+    "script": "smoke_test_sast.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_sast.out.log",
+    "err": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_sast.err.log"
+  },
+  {
+    "script": "smoke_test_async.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_async.out.log",
+    "err": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_async.err.log"
+  },
+  {
+    "script": "smoke_test_async_sast.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_async_sast.out.log",
+    "err": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_async_sast.err.log"
+  },
+  {
+    "script": "smoke_test_cancel.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_cancel.out.log",
+    "err": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_cancel.err.log"
+  },
+  {
+    "script": "smoke_test_audit.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_audit.out.log",
+    "err": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_smoke_test_audit.err.log"
+  },
+  {
+    "script": "verify_all.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_verify_all.out.log",
+    "err": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_verify_all.err.log"
+  },
+  {
+    "script": "verify_dast_real.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_verify_dast_real.out.log",
+    "err": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_verify_dast_real.err.log"
+  },
+  {
+    "script": "verify_enhanced_results.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_verify_enhanced_results_final.out.log",
+    "err": ""
+  },
+  {
+    "script": "real_integration_check.py",
+    "exit_code": 0,
+    "out": "D:\\ziliao\\dev\\figures\\raw_logs\\functional_afterfix_real_integration_check.out.log",
+    "err": ""
+  }
+]

@@ -1,0 +1,36 @@
+flowchart LR
+    T["tasks<br/>扫描任务主表<br/>id(PK)<br/>task_type<br/>status<br/>target_path / target_url<br/>report_path<br/>result_summary"]
+
+    subgraph SAST["SAST 静态代码扫描"]
+        direction TB
+        SR["sast_results<br/>id(PK)<br/>task_id(FK, UNIQUE)<br/>issue_count<br/>high_count / medium_count / low_count<br/>severity_distribution<br/>raw_report_path"]
+        SI["sast_issues<br/>id(PK)<br/>task_id(FK)<br/>test_id / test_name<br/>issue_severity<br/>filename / line_number<br/>cwe / owasp"]
+        SR -->|汇总对应明细| SI
+    end
+
+    subgraph DAST["DAST 动态应用扫描"]
+        direction TB
+        DR["dast_results<br/>id(PK)<br/>task_id(FK, UNIQUE)<br/>target_url<br/>is_timeout<br/>issue_count / crawled_pages<br/>raw_report_path"]
+        DI["dast_issues<br/>id(PK)<br/>task_id(FK)<br/>category / level<br/>method / path / parameter<br/>http_request<br/>cwe / owasp"]
+        DR -->|汇总对应明细| DI
+    end
+
+    subgraph SCA["SCA 依赖成分分析"]
+        direction TB
+        CR["sca_results<br/>id(PK)<br/>task_id(FK, UNIQUE)<br/>dependency_count<br/>vulnerability_count<br/>fixable_count<br/>raw_report_path"]
+        CI["sca_issues<br/>id(PK)<br/>task_id(FK)<br/>package_name<br/>installed_version<br/>vulnerability_id<br/>fix_versions<br/>severity"]
+        CR -->|汇总对应明细| CI
+    end
+
+    AI["ai_issue_insights<br/>AI 问题解读缓存<br/>id(PK)<br/>task_id(FK)<br/>task_type<br/>issue_id<br/>issue_fingerprint<br/>model_name"]
+
+    T -->|SAST 任务 1:1 汇总| SR
+    T -->|SAST 任务 1:N 明细| SI
+    T -->|DAST 任务 1:1 汇总| DR
+    T -->|DAST 任务 1:N 明细| DI
+    T -->|SCA 任务 1:1 汇总| CR
+    T -->|SCA 任务 1:N 明细| CI
+
+    SI -.->|问题编号与指纹| AI
+    DI -.->|问题编号与指纹| AI
+    CI -.->|问题编号与指纹| AI

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "juice-shop",
+    "url": "http://127.0.0.1:3000",
+    "description": "本地 Juice Shop 基线扫描"
+  },
+  {
+    "name": "dvwa",
+    "url": "http://127.0.0.1:3001",
+    "description": "本地 DVWA 传统 Web 漏洞扫描"
+  },
+  {
+    "name": "webgoat",
+    "url": "http://127.0.0.1:3002/WebGoat",
+    "description": "本地 WebGoat 训练靶场扫描"
+  },
+  {
+    "name": "mutillidae",
+    "url": "http://127.0.0.1:3003",
+    "description": "本地 Mutillidae II 综合靶场扫描"
+  }
+]

@@ -1,0 +1,15 @@
+﻿category,case_name,payload_summary,http_status,expected,actual,passed
+Access Control,User A reads User B task,task_id=232,404,"[403, 404] blocked",task not found,yes
+Access Control,User A downloads User B report,task_id=232,404,"[403, 404] blocked",task not found,yes
+Access Control,Normal user opens admin dashboard,/api/admin/dashboard,403,[403] forbidden,permission denied,yes
+Injection,Login SQL payload,' OR '1'='1,401,"[400, 401, 429] not authenticated",unauthorized,yes
+Injection,Task type SQL payload,task_type=' OR '1'='1,400,[400] invalid value,invalid parameters,yes
+Injection,Audit keyword XSS payload,<script>alert(1)</script>,200,[200] handled as data,ok,yes
+File Upload,Oversized file,21MB .py,400,"[400, 413] rejected",file size exceeds limit,yes
+File Upload,Executable extension,.exe,400,[400] unsupported type,unsupported file type,yes
+File Upload,Path traversal filename,../../etc/passwd,400,[400] rejected or neutralized,unsupported file type,yes
+File Upload,Empty file,0 byte .py,400,"[400, 422] rejected",empty file,yes
+Token Invalid,Expired token,expires_delta=-1s,401,[401] token expired,{'msg': 'Token has expired'},yes
+Token Invalid,Forged signature token,modified signature,422,"[401, 422] token rejected",{'msg': 'Signature verification failed'},yes
+Token Invalid,Missing Authorization,no header,401,[401] missing token,{'msg': 'Missing Authorization Header'},yes
+Token Invalid,Wrong auth scheme,Token abc,401,"[401, 422] malformed header","{'msg': ""Missing 'Bearer' type in 'Authorization' header. Expected 'Authorization: Bearer <JWT>'""}",yes

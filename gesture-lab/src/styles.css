@@ -1,0 +1,222 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter, "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", system-ui,
+    sans-serif;
+  background: #03050d;
+  color: #eaf6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+  letter-spacing: 0;
+}
+
+.stage {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 24% 30%, rgba(0, 229, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 78% 55%, rgba(255, 57, 192, 0.16), transparent 30%),
+    linear-gradient(135deg, #050711, #090b18 48%, #03050d);
+}
+
+.stage::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+}
+
+.camera,
+.scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.camera {
+  object-fit: cover;
+  transform: scaleX(-1);
+  opacity: 0.72;
+  filter: saturate(1.12) contrast(1.08);
+}
+
+.camera.hidden {
+  opacity: 0;
+}
+
+.scene {
+  z-index: 1;
+}
+
+.mode-bar {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  background: rgba(3, 5, 14, 0.72);
+  border: 1px solid rgba(118, 182, 255, 0.24);
+  border-radius: 8px;
+  transform: translateX(-50%);
+  backdrop-filter: blur(18px);
+}
+
+.mode-button,
+.tool-button,
+.start-button {
+  height: 38px;
+  border: 1px solid rgba(132, 171, 219, 0.28);
+  border-radius: 6px;
+  color: #dce9ff;
+  background: rgba(255, 255, 255, 0.07);
+  cursor: pointer;
+}
+
+.mode-button {
+  min-width: 104px;
+  padding: 0 16px;
+}
+
+.mode-button.active,
+.tool-button.active,
+.start-button {
+  color: #f4feff;
+  background: rgba(56, 232, 255, 0.16);
+  border-color: rgba(56, 232, 255, 0.86);
+  box-shadow: 0 0 18px rgba(56, 232, 255, 0.28);
+}
+
+.tool-bar {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  background: rgba(3, 5, 14, 0.7);
+  border: 1px solid rgba(118, 182, 255, 0.22);
+  border-radius: 8px;
+  backdrop-filter: blur(18px);
+}
+
+.tool-button {
+  min-width: 58px;
+  padding: 0 12px;
+}
+
+.status {
+  position: absolute;
+  right: 22px;
+  bottom: 24px;
+  z-index: 3;
+  min-width: 84px;
+  padding: 8px 12px;
+  color: #75f6ff;
+  text-align: center;
+  background: rgba(3, 5, 14, 0.62);
+  border: 1px solid rgba(56, 232, 255, 0.26);
+  border-radius: 8px;
+  text-shadow: 0 0 14px rgba(56, 232, 255, 0.8);
+  backdrop-filter: blur(18px);
+}
+
+.debug-panel {
+  position: absolute;
+  top: 82px;
+  right: 18px;
+  z-index: 3;
+  padding: 10px 12px;
+  color: #dce9ff;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre;
+  background: rgba(3, 5, 14, 0.72);
+  border: 1px solid rgba(56, 232, 255, 0.26);
+  border-radius: 8px;
+  backdrop-filter: blur(18px);
+}
+
+.permission {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  place-content: center;
+  gap: 12px;
+  text-align: center;
+  background: radial-gradient(circle, rgba(4, 8, 20, 0.62), rgba(3, 5, 13, 0.9));
+}
+
+.permission.hidden {
+  display: none;
+}
+
+.permission p {
+  margin: 0;
+  color: #9fb6d8;
+  font-size: 14px;
+}
+
+.start-button {
+  min-width: 138px;
+  padding: 0 20px;
+}
+
+@media (max-width: 720px) {
+  .mode-bar {
+    top: 10px;
+    max-width: calc(100vw - 20px);
+    overflow-x: auto;
+  }
+
+  .mode-button {
+    min-width: 88px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .tool-bar {
+    left: 10px;
+    bottom: 10px;
+    max-width: calc(100vw - 116px);
+    overflow-x: auto;
+  }
+
+  .tool-button {
+    min-width: 50px;
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .status {
+    right: 10px;
+    bottom: 16px;
+    min-width: 78px;
+    font-size: 13px;
+  }
+}

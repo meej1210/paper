@@ -1,0 +1,31 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: devsecops-redis
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    container_name: devsecops-juice-shop
+    ports:
+      - "3000:3000"
+
+  dvwa:
+    image: vulnerables/web-dvwa:latest
+    container_name: devsecops-dvwa
+    ports:
+      - "3001:80"
+
+  webgoat:
+    image: webgoat/webgoat:latest
+    container_name: devsecops-webgoat
+    ports:
+      - "3002:8080"
+
+  mutillidae:
+    image: citizenstig/nowasp:latest
+    container_name: devsecops-mutillidae
+    ports:
+      - "3003:80"

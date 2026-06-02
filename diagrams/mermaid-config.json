@@ -1,0 +1,22 @@
+﻿{
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily": "SimSun, Songti SC, Microsoft YaHei, Times New Roman, serif",
+    "fontSize": "16px",
+    "primaryColor": "#ffffff",
+    "primaryTextColor": "#111111",
+    "primaryBorderColor": "#111111",
+    "lineColor": "#111111",
+    "secondaryColor": "#ffffff",
+    "tertiaryColor": "#ffffff",
+    "clusterBkg": "#ffffff",
+    "clusterBorder": "#111111",
+    "edgeLabelBackground": "#ffffff"
+  },
+  "flowchart": {
+    "curve": "linear",
+    "padding": 20,
+    "nodeSpacing": 50,
+    "rankSpacing": 60
+  }
+}

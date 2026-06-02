@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+
+# Database
+*.db
+*.sqlite3
+
+# Uploads & Reports (runtime artifacts)
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/reports/*
+!backend/reports/.gitkeep
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# IDE
+.claude/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+gesture-lab/node_modules/
+ppt_midterm/node_modules/
+
+# Test / Coverage
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Compiled JS in src (should not be committed)
+frontend/src/**/*.js
+
+# Misc
+*.log
+tmp/
+~$*

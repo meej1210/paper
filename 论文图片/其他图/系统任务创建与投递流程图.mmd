@@ -1,0 +1,14 @@
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "SimSun, Microsoft YaHei, Arial", "fontSize": "18px", "primaryColor": "#ffffff", "primaryBorderColor": "#222222", "lineColor": "#222222", "tertiaryColor": "#ffffff"}, "flowchart": {"curve": "linear", "nodeSpacing": 430, "rankSpacing": 45, "htmlLabels": true}} }%%
+flowchart TB
+    A["用户注册或登录"] --> B["获取 JWT"]
+    B --> C["创建扫描任务"]
+    C --> D{"后端参数校验"}
+
+    D -->|校验失败| X["返回错误信息<br/>并记录审计"]
+    D -->|校验通过| E["写入任务记录"]
+    E --> F["投递 Celery 任务"]
+
+    classDef node fill:#ffffff,stroke:#222222,stroke-width:1.4px,color:#111111;
+    classDef decision fill:#ffffff,stroke:#222222,stroke-width:1.4px,color:#111111;
+    class A,B,C,E,F,X node;
+    class D decision;
