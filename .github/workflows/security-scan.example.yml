@@ -1,0 +1,23 @@
+name: DevSecOps Security Scan Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run platform security gate
+        env:
+          DEVSECOPS_USER: ${{ secrets.DEVSECOPS_USER }}
+          DEVSECOPS_PASSWORD: ${{ secrets.DEVSECOPS_PASSWORD }}
+        run: |
+          python scripts/ci_security_scan.py \
+            --base-url http://127.0.0.1:5000/api \
+            --username "$DEVSECOPS_USER" \
+            --password "$DEVSECOPS_PASSWORD" \
+            --type sca \
+            --target-file requirements.txt \
+            --fail-on fixable \
+            --out-dir tmp/ci-artifacts
